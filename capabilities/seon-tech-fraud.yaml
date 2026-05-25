@@ -1,0 +1,82 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: SEON API — Fraud
+  description: 'SEON API — Fraud. 1 operations. Lead operation: Submit a fraud evaluation request. Self-contained Naftiko
+    capability covering one SEON business surface.'
+  tags:
+  - SEON
+  - Fraud
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    SEON_TECH_API_KEY: SEON_TECH_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: seon-tech-fraud
+    baseUri: https://api.seon.io
+    description: SEON API — Fraud business capability. Self-contained, no shared references.
+    resources:
+    - name: SeonRestService-fraud-api-v2
+      path: /SeonRestService/fraud-api/v2/
+      operations:
+      - name: submitfraudcheck
+        method: POST
+        description: Submit a fraud evaluation request
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: X-API-KEY
+      value: '{{env.SEON_TECH_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: seon-tech-fraud-rest
+    port: 8080
+    description: REST adapter for SEON API — Fraud. One Spectral-compliant resource per consumed operation, prefixed with
+      /v1.
+    resources:
+    - path: /v1/seonrestservice/fraud-api/v2
+      name: seonrestservice-fraud-api-v2
+      description: REST surface for SeonRestService-fraud-api-v2.
+      operations:
+      - method: POST
+        name: submitfraudcheck
+        description: Submit a fraud evaluation request
+        call: seon-tech-fraud.submitfraudcheck
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: seon-tech-fraud-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for SEON API — Fraud. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: submit-fraud-evaluation-request
+      description: Submit a fraud evaluation request
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: seon-tech-fraud.submitfraudcheck
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

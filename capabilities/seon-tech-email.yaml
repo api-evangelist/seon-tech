@@ -1,0 +1,82 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: SEON API — Email
+  description: 'SEON API — Email. 1 operations. Lead operation: Enrich an email address. Self-contained Naftiko capability
+    covering one SEON business surface.'
+  tags:
+  - SEON
+  - Email
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    SEON_TECH_API_KEY: SEON_TECH_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: seon-tech-email
+    baseUri: https://api.seon.io
+    description: SEON API — Email business capability. Self-contained, no shared references.
+    resources:
+    - name: SeonRestService-email-api-v3
+      path: /SeonRestService/email-api/v3
+      operations:
+      - name: enrichemail
+        method: POST
+        description: Enrich an email address
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: X-API-KEY
+      value: '{{env.SEON_TECH_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: seon-tech-email-rest
+    port: 8080
+    description: REST adapter for SEON API — Email. One Spectral-compliant resource per consumed operation, prefixed with
+      /v1.
+    resources:
+    - path: /v1/seonrestservice/email-api/v3
+      name: seonrestservice-email-api-v3
+      description: REST surface for SeonRestService-email-api-v3.
+      operations:
+      - method: POST
+        name: enrichemail
+        description: Enrich an email address
+        call: seon-tech-email.enrichemail
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: seon-tech-email-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for SEON API — Email. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: enrich-email-address
+      description: Enrich an email address
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: seon-tech-email.enrichemail
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

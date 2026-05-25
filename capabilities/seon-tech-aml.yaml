@@ -1,0 +1,81 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: SEON API — AML
+  description: 'SEON API — AML. 1 operations. Lead operation: Submit an AML screening request. Self-contained Naftiko capability
+    covering one SEON business surface.'
+  tags:
+  - SEON
+  - AML
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    SEON_TECH_API_KEY: SEON_TECH_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: seon-tech-aml
+    baseUri: https://api.seon.io
+    description: SEON API — AML business capability. Self-contained, no shared references.
+    resources:
+    - name: SeonRestService-aml-api-v1
+      path: /SeonRestService/aml-api/v1
+      operations:
+      - name: submitamlcheck
+        method: POST
+        description: Submit an AML screening request
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: X-API-KEY
+      value: '{{env.SEON_TECH_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: seon-tech-aml-rest
+    port: 8080
+    description: REST adapter for SEON API — AML. One Spectral-compliant resource per consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/seonrestservice/aml-api/v1
+      name: seonrestservice-aml-api-v1
+      description: REST surface for SeonRestService-aml-api-v1.
+      operations:
+      - method: POST
+        name: submitamlcheck
+        description: Submit an AML screening request
+        call: seon-tech-aml.submitamlcheck
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: seon-tech-aml-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for SEON API — AML. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: submit-aml-screening-request
+      description: Submit an AML screening request
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: seon-tech-aml.submitamlcheck
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
