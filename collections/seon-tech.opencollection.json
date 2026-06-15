@@ -1,0 +1,182 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SEON API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{X-API-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Fraud",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit a fraud evaluation request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.seon.io/SeonRestService/fraud-api/v2/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Combines email, phone, IP, BIN, and AML signals with device fingerprinting to return enriched data, rules, and risk scoring in a single call."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Email",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Enrich an email address",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.seon.io/SeonRestService/email-api/v3",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Returns insights into the digital footprint associated with an email address."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Phone",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Enrich a phone number",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.seon.io/SeonRestService/phone-api/v2",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Returns risk scores, account aggregates, fraud history, carrier details, and other phone intelligence data."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "IP",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lookup IP address intelligence",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.seon.io/SeonRestService/ip-api/v1/:ip",
+            "params": [
+              {
+                "name": "ip",
+                "value": "",
+                "type": "path",
+                "description": "IPv4 or IPv6 address to evaluate."
+              },
+              {
+                "name": "include",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of additional fields (history, flags, id)."
+              },
+              {
+                "name": "flags_timeframe_days",
+                "value": "",
+                "type": "query",
+                "description": "Timeframe in days used when evaluating flags."
+              }
+            ]
+          },
+          "docs": "Returns IP intelligence including history, flags, and identifiers."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "BIN",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lookup BIN (card) information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.seon.io/SeonRestService/bin-api/v1/:bin",
+            "params": [
+              {
+                "name": "bin",
+                "value": "",
+                "type": "path",
+                "description": "Bank Identification Number to evaluate."
+              },
+              {
+                "name": "include",
+                "value": "",
+                "type": "query",
+                "description": "Optional include directives (e.g. id)."
+              }
+            ]
+          },
+          "docs": "Returns information about a card's bank, issuer, country, type, and validity for a given BIN (Bank Identification Number)."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "AML",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit an AML screening request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.seon.io/SeonRestService/aml-api/v1",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Screens a user against PEP, sanctions, and high-risk lists for AML compliance."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
