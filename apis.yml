@@ -7,7 +7,7 @@ description: >-
   enrichment of email, phone, IP, BIN, and device signals with customer-defined rules and machine learning to score risk
   and prevent fraud, account takeover, multi-accounting, and money laundering across digital channels.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AML Compliance
   - Device Intelligence
