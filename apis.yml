@@ -147,15 +147,15 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-overview
-      - type: SDK
+      - type: SDKs
         url: https://github.com/seontechnologies/seon-web-sdk-public
-      - type: SDK
+      - type: SDKs
         url: https://github.com/seontechnologies/seon-ios-sdk-public
-      - type: SDK
+      - type: SDKs
         url: https://github.com/seontechnologies/seon-android-sdk-public
-      - type: SDK
+      - type: SDKs
         url: https://github.com/seontechnologies/seon-sdk-flutter-plugin
-      - type: SDK
+      - type: SDKs
         url: https://github.com/seontechnologies/seon-unity-sdk-plugin
   - aid: seon-tech:idv
     name: SEON Identity Verification
@@ -171,9 +171,9 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.seon.io/knowledge-base/idv/identity-verification-solution
-      - type: SDK
+      - type: SDKs
         url: https://github.com/seontechnologies/seon-idv-sdk-ios-public
-      - type: SDK
+      - type: SDKs
         url: https://github.com/seontechnologies/seon-idv-sdk-android-public
   - aid: seon-tech:orchestration
     name: SEON Orchestration
@@ -188,15 +188,15 @@ apis:
     properties:
       - type: Documentation
         url: https://seon.io/products/fraud-orchestration/
-      - type: SDK
+      - type: SDKs
         url: https://github.com/seontechnologies/seon-orchestration-sdk-ios-public
-      - type: SDK
+      - type: SDKs
         url: https://github.com/seontechnologies/seon-orchestration-sdk-android-public
-      - type: SDK
+      - type: SDKs
         url: https://github.com/seontechnologies/seon-orchestration-sdk-flutter-public
-      - type: SDK
+      - type: SDKs
         url: https://github.com/seontechnologies/seon-orchestration-sdk-react-native-public
-      - type: SDK
+      - type: SDKs
         url: https://github.com/seontechnologies/seon-orchestration-sdk-cordova-public
   - aid: seon-tech:user-session-monitoring
     name: SEON User Session Monitoring
@@ -209,11 +209,11 @@ apis:
       - Behavioral Biometrics
       - Session Monitoring
     properties:
-      - type: SDK
+      - type: SDKs
         url: https://github.com/seontechnologies/seon-web-stream-sdk-public
-      - type: SDK
+      - type: SDKs
         url: https://github.com/seontechnologies/seon-ios-stream-sdk-public
-      - type: SDK
+      - type: SDKs
         url: https://github.com/seontechnologies/seon-android-stream-sdk-public
 common:
   - type: Website
@@ -226,9 +226,9 @@ common:
     url: https://docs.seon.io/getting-started
   - type: Authentication
     url: https://docs.seon.io/api-reference/introduction
-  - type: SignUp
+  - type: Signup
     url: https://admin.seon.io/sign-up
-  - type: SignIn
+  - type: Login
     url: https://admin.seon.io/
   - type: Pricing
     url: https://seon.io/pricing/
@@ -264,7 +264,7 @@ common:
     url: https://seon.io/careers/
   - type: ContactUs
     url: https://seon.io/contact-us/
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://docs.seon.io/llms.txt
 integrations:
   - name: Shopify
