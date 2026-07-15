@@ -216,6 +216,8 @@ apis:
       - type: SDKs
         url: https://github.com/seontechnologies/seon-android-stream-sdk-public
 common:
+  - type: AgenticAccess
+    url: agentic-access/seon-tech-agentic-access.yml
   - type: TrustCenter
     url: security/seon-tech-trust-center.yml
   - type: DomainSecurity
