@@ -7,7 +7,20 @@ description: >-
   enrichment of email, phone, IP, BIN, and device signals with customer-defined rules and machine learning to score risk
   and prevent fraud, account takeover, multi-accounting, and money laundering across digital channels.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/seon-tech.png
 tags:
   - AML Compliance
   - Device Intelligence
@@ -20,201 +33,282 @@ created: '2026-05-25'
 modified: '2026-05-25'
 specificationVersion: '0.19'
 apis:
-  - aid: seon-tech:fraud-api
-    name: SEON Fraud API
-    description: >-
-      The SEON Fraud API is a modular API that combines email, phone number, IP, BIN, and AML APIs with device
-      fingerprinting so customers can request and receive enriched data, applied rules, and risk scoring in a single API
-      call to detect and prevent fraud.
-    humanURL: https://docs.seon.io/api-reference/fraud-api
-    baseURL: https://api.seon.io/SeonRestService/fraud-api/v2/
-    tags:
-      - Fraud Detection
-      - Identity
-      - Risk Scoring
-    properties:
-      - type: Documentation
-        url: https://docs.seon.io/api-reference/fraud-api
-      - type: GettingStarted
-        url: https://docs.seon.io/getting-started
-      - type: Authentication
-        url: https://docs.seon.io/api-reference/introduction
-      - type: OpenAPI
-        url: openapi/seon-tech-openapi.yml
-      - type: Plans
-        url: plans/seon-tech-plans-pricing.yml
-      - type: RateLimits
-        url: rate-limits/seon-tech-rate-limits.yml
-      - type: FinOps
-        url: finops/seon-tech-finops.yml
-    contact:
-      - FN: SEON Developer Support
-        email: dev@seon.io
-  - aid: seon-tech:email-api
-    name: SEON Email API
-    description: >-
-      The SEON Email API is a standalone email enrichment endpoint that returns digital footprint data tied to an email
-      address, including approximate minimum account age, registration status across dozens of social and online
-      services, domain details, and disposable / free provider flags.
-    humanURL: https://docs.seon.io/api-reference/email-api
-    baseURL: https://api.seon.io/SeonRestService/email-api/v3
-    tags:
-      - Email
-      - Enrichment
-      - Fraud Prevention
-    properties:
-      - type: Documentation
-        url: https://docs.seon.io/api-reference/email-api
-      - type: OpenAPI
-        url: openapi/seon-tech-openapi.yml
-  - aid: seon-tech:phone-api
-    name: SEON Phone API
-    description: >-
-      The SEON Phone API returns phone-number intelligence including carrier and line-type detail, account presence
-      across major social and messaging services (WhatsApp, Telegram, Viber, social networks), and risk signals tied to
-      the number.
-    humanURL: https://docs.seon.io/api-reference/phone-api
-    baseURL: https://api.seon.io/SeonRestService/phone-api/v2
-    tags:
-      - Enrichment
-      - Fraud Prevention
-      - Phone
-    properties:
-      - type: Documentation
-        url: https://docs.seon.io/api-reference/phone-api
-      - type: OpenAPI
-        url: openapi/seon-tech-openapi.yml
-  - aid: seon-tech:ip-api
-    name: SEON IP API
-    description: >-
-      The SEON IP API returns IP intelligence including geolocation, ISP, proxy/VPN/Tor detection, residential-proxy
-      detection, datacenter classification, and a history of risk flags observed against the IP address.
-    humanURL: https://docs.seon.io/api-reference/ip-api
-    baseURL: https://api.seon.io/SeonRestService/ip-api/v1
-    tags:
-      - Enrichment
-      - Fraud Prevention
-      - IP Intelligence
-    properties:
-      - type: Documentation
-        url: https://docs.seon.io/api-reference/ip-api
-      - type: OpenAPI
-        url: openapi/seon-tech-openapi.yml
-  - aid: seon-tech:bin-api
-    name: SEON BIN API
-    description: >-
-      The SEON BIN API returns information about a payment card given its Bank Identification Number, including issuing
-      bank, country, card brand, card type, and validity, supporting card-not-present fraud decisions.
-    humanURL: https://docs.seon.io/api-reference/bin-api
-    baseURL: https://api.seon.io/SeonRestService/bin-api/v1
-    tags:
-      - BIN
-      - Enrichment
-      - Payments
-    properties:
-      - type: Documentation
-        url: https://docs.seon.io/api-reference/bin-api
-      - type: OpenAPI
-        url: openapi/seon-tech-openapi.yml
-  - aid: seon-tech:aml-api
-    name: SEON AML API
-    description: >-
-      The SEON AML API screens individuals and entities against politically-exposed-person (PEP), sanctions, watchlist,
-      and adverse-media data sources for anti-money-laundering compliance, with optional ongoing monitoring.
-    humanURL: https://docs.seon.io/api-reference/aml-api
-    baseURL: https://api.seon.io/SeonRestService/aml-api/v1
-    tags:
-      - AML Compliance
-      - PEP Screening
-      - Sanctions Screening
-    properties:
-      - type: Documentation
-        url: https://docs.seon.io/api-reference/aml-api
-      - type: OpenAPI
-        url: openapi/seon-tech-openapi.yml
-  - aid: seon-tech:device-intelligence
-    name: SEON Device Intelligence
-    description: >-
-      SEON Device Intelligence is the device-fingerprinting product surfaced through JavaScript, iOS, Android, Flutter,
-      React Native, Cordova, and Unity SDKs. Captured device signals (True Device ID, hashes, behavioral biometrics,
-      geolocation, remote-access detection, residential-proxy and VPN detection) are returned via the Fraud API or User
-      Session Monitoring stream.
-    humanURL: https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-overview
-    tags:
-      - Device Fingerprinting
-      - Device Intelligence
-      - Fraud Prevention
-    properties:
-      - type: Documentation
-        url: https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-overview
-      - type: SDKs
-        url: https://github.com/seontechnologies/seon-web-sdk-public
-      - type: SDKs
-        url: https://github.com/seontechnologies/seon-ios-sdk-public
-      - type: SDKs
-        url: https://github.com/seontechnologies/seon-android-sdk-public
-      - type: SDKs
-        url: https://github.com/seontechnologies/seon-sdk-flutter-plugin
-      - type: SDKs
-        url: https://github.com/seontechnologies/seon-unity-sdk-plugin
-  - aid: seon-tech:idv
-    name: SEON Identity Verification
-    description: >-
-      SEON Identity Verification (IDV) is an AI-powered identity verification product combining document checks,
-      biometric liveness, and enriched fraud signals. Integration is via native iOS and Android SDKs.
-    humanURL: https://docs.seon.io/knowledge-base/idv/identity-verification-solution
-    tags:
-      - Biometrics
-      - Document Verification
-      - Identity Verification
-      - KYC
-    properties:
-      - type: Documentation
-        url: https://docs.seon.io/knowledge-base/idv/identity-verification-solution
-      - type: SDKs
-        url: https://github.com/seontechnologies/seon-idv-sdk-ios-public
-      - type: SDKs
-        url: https://github.com/seontechnologies/seon-idv-sdk-android-public
-  - aid: seon-tech:orchestration
-    name: SEON Orchestration
-    description: >-
-      SEON Orchestration lets customers compose multi-step fraud, KYC, and risk workflows that combine SEON enrichment
-      with third-party providers. Integration is via the Orchestration SDKs for iOS, Android, Flutter, React Native, and
-      Cordova.
-    humanURL: https://seon.io/products/fraud-orchestration/
-    tags:
-      - Fraud Orchestration
-      - Workflow
-    properties:
-      - type: Documentation
-        url: https://seon.io/products/fraud-orchestration/
-      - type: SDKs
-        url: https://github.com/seontechnologies/seon-orchestration-sdk-ios-public
-      - type: SDKs
-        url: https://github.com/seontechnologies/seon-orchestration-sdk-android-public
-      - type: SDKs
-        url: https://github.com/seontechnologies/seon-orchestration-sdk-flutter-public
-      - type: SDKs
-        url: https://github.com/seontechnologies/seon-orchestration-sdk-react-native-public
-      - type: SDKs
-        url: https://github.com/seontechnologies/seon-orchestration-sdk-cordova-public
-  - aid: seon-tech:user-session-monitoring
-    name: SEON User Session Monitoring
-    description: >-
-      User Session Monitoring streams in-session behavioral, device, and risk signals for continuous account-takeover
-      and session-hijacking detection across web, iOS, and Android. Delivered via dedicated Stream SDKs.
-    humanURL: https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-overview
-    tags:
-      - Account Takeover
-      - Behavioral Biometrics
-      - Session Monitoring
-    properties:
-      - type: SDKs
-        url: https://github.com/seontechnologies/seon-web-stream-sdk-public
-      - type: SDKs
-        url: https://github.com/seontechnologies/seon-ios-stream-sdk-public
-      - type: SDKs
-        url: https://github.com/seontechnologies/seon-android-stream-sdk-public
+- aid: seon-tech:device-intelligence
+  name: SEON Device Intelligence
+  description: >-
+    SEON Device Intelligence is the device-fingerprinting product surfaced through JavaScript, iOS, Android,
+    Flutter, React Native, Cordova, and Unity SDKs. Captured device signals (True Device ID, hashes, behavioral
+    biometrics, geolocation, remote-access detection, residential-proxy and VPN detection) are returned
+    via the Fraud API or User Session Monitoring stream.
+  humanURL: https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-overview
+  tags:
+  - Device Fingerprinting
+  - Device Intelligence
+  - Fraud Prevention
+  properties:
+  - type: Documentation
+    url: https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-overview
+  - type: SDKs
+    url: https://github.com/seontechnologies/seon-web-sdk-public
+  - type: SDKs
+    url: https://github.com/seontechnologies/seon-ios-sdk-public
+  - type: SDKs
+    url: https://github.com/seontechnologies/seon-android-sdk-public
+  - type: SDKs
+    url: https://github.com/seontechnologies/seon-sdk-flutter-plugin
+  - type: SDKs
+    url: https://github.com/seontechnologies/seon-unity-sdk-plugin
+- aid: seon-tech:idv
+  name: SEON Identity Verification
+  description: >-
+    SEON Identity Verification (IDV) is an AI-powered identity verification product combining document
+    checks, biometric liveness, and enriched fraud signals. Integration is via native iOS and Android
+    SDKs.
+  humanURL: https://docs.seon.io/knowledge-base/idv/identity-verification-solution
+  tags:
+  - Biometrics
+  - Document Verification
+  - Identity Verification
+  - KYC
+  properties:
+  - type: Documentation
+    url: https://docs.seon.io/knowledge-base/idv/identity-verification-solution
+  - type: SDKs
+    url: https://github.com/seontechnologies/seon-idv-sdk-ios-public
+  - type: SDKs
+    url: https://github.com/seontechnologies/seon-idv-sdk-android-public
+- aid: seon-tech:orchestration
+  name: SEON Orchestration
+  description: >-
+    SEON Orchestration lets customers compose multi-step fraud, KYC, and risk workflows that combine SEON
+    enrichment with third-party providers. Integration is via the Orchestration SDKs for iOS, Android,
+    Flutter, React Native, and Cordova.
+  humanURL: https://seon.io/products/fraud-orchestration/
+  tags:
+  - Fraud Orchestration
+  - Workflow
+  properties:
+  - type: Documentation
+    url: https://seon.io/products/fraud-orchestration/
+  - type: SDKs
+    url: https://github.com/seontechnologies/seon-orchestration-sdk-ios-public
+  - type: SDKs
+    url: https://github.com/seontechnologies/seon-orchestration-sdk-android-public
+  - type: SDKs
+    url: https://github.com/seontechnologies/seon-orchestration-sdk-flutter-public
+  - type: SDKs
+    url: https://github.com/seontechnologies/seon-orchestration-sdk-react-native-public
+  - type: SDKs
+    url: https://github.com/seontechnologies/seon-orchestration-sdk-cordova-public
+- aid: seon-tech:user-session-monitoring
+  name: SEON User Session Monitoring
+  description: >-
+    User Session Monitoring streams in-session behavioral, device, and risk signals for continuous account-takeover
+    and session-hijacking detection across web, iOS, and Android. Delivered via dedicated Stream SDKs.
+  humanURL: https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-overview
+  tags:
+  - Account Takeover
+  - Behavioral Biometrics
+  - Session Monitoring
+  properties:
+  - type: SDKs
+    url: https://github.com/seontechnologies/seon-web-stream-sdk-public
+  - type: SDKs
+    url: https://github.com/seontechnologies/seon-ios-stream-sdk-public
+  - type: SDKs
+    url: https://github.com/seontechnologies/seon-android-stream-sdk-public
+- aid: seon-tech:seon-tech-aml-api
+  name: SEON AML API
+  description: The AML API from SEON — 1 operation(s) for aml.
+  humanURL: https://docs.seon.io/api-reference/fraud-api
+  baseURL: https://api.seon.io/SeonRestService/fraud-api/v2/
+  tags:
+  - AML
+  properties:
+  - type: OpenAPI
+    url: openapi/seon-tech-aml-api-openapi.yml
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/fraud-api
+  - type: GettingStarted
+    url: https://docs.seon.io/getting-started
+  - type: Authentication
+    url: https://docs.seon.io/api-reference/introduction
+  - type: Plans
+    url: plans/seon-tech-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/seon-tech-rate-limits.yml
+  - type: FinOps
+    url: finops/seon-tech-finops.yml
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/email-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/phone-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/ip-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/bin-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/aml-api
+- aid: seon-tech:seon-tech-bin-api
+  name: SEON BIN API
+  description: The BIN API from SEON — 1 operation(s) for bin.
+  humanURL: https://docs.seon.io/api-reference/fraud-api
+  baseURL: https://api.seon.io/SeonRestService/fraud-api/v2/
+  tags:
+  - BIN
+  properties:
+  - type: OpenAPI
+    url: openapi/seon-tech-bin-api-openapi.yml
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/fraud-api
+  - type: GettingStarted
+    url: https://docs.seon.io/getting-started
+  - type: Authentication
+    url: https://docs.seon.io/api-reference/introduction
+  - type: Plans
+    url: plans/seon-tech-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/seon-tech-rate-limits.yml
+  - type: FinOps
+    url: finops/seon-tech-finops.yml
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/email-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/phone-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/ip-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/bin-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/aml-api
+- aid: seon-tech:seon-tech-email-api
+  name: SEON Email API
+  description: The Email API from SEON — 1 operation(s) for email.
+  humanURL: https://docs.seon.io/api-reference/fraud-api
+  baseURL: https://api.seon.io/SeonRestService/fraud-api/v2/
+  tags:
+  - Email
+  properties:
+  - type: OpenAPI
+    url: openapi/seon-tech-email-api-openapi.yml
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/fraud-api
+  - type: GettingStarted
+    url: https://docs.seon.io/getting-started
+  - type: Authentication
+    url: https://docs.seon.io/api-reference/introduction
+  - type: Plans
+    url: plans/seon-tech-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/seon-tech-rate-limits.yml
+  - type: FinOps
+    url: finops/seon-tech-finops.yml
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/email-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/phone-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/ip-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/bin-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/aml-api
+- aid: seon-tech:seon-tech-fraud-api
+  name: SEON Fraud API
+  description: The Fraud API from SEON — 1 operation(s) for fraud.
+  humanURL: https://docs.seon.io/api-reference/fraud-api
+  baseURL: https://api.seon.io/SeonRestService/fraud-api/v2/
+  tags:
+  - Fraud
+  properties:
+  - type: OpenAPI
+    url: openapi/seon-tech-fraud-api-openapi.yml
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/fraud-api
+  - type: GettingStarted
+    url: https://docs.seon.io/getting-started
+  - type: Authentication
+    url: https://docs.seon.io/api-reference/introduction
+  - type: Plans
+    url: plans/seon-tech-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/seon-tech-rate-limits.yml
+  - type: FinOps
+    url: finops/seon-tech-finops.yml
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/email-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/phone-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/ip-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/bin-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/aml-api
+- aid: seon-tech:seon-tech-ip-api
+  name: SEON IP API
+  description: The IP API from SEON — 1 operation(s) for ip.
+  humanURL: https://docs.seon.io/api-reference/fraud-api
+  baseURL: https://api.seon.io/SeonRestService/fraud-api/v2/
+  tags:
+  - IP
+  properties:
+  - type: OpenAPI
+    url: openapi/seon-tech-ip-api-openapi.yml
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/fraud-api
+  - type: GettingStarted
+    url: https://docs.seon.io/getting-started
+  - type: Authentication
+    url: https://docs.seon.io/api-reference/introduction
+  - type: Plans
+    url: plans/seon-tech-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/seon-tech-rate-limits.yml
+  - type: FinOps
+    url: finops/seon-tech-finops.yml
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/email-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/phone-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/ip-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/bin-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/aml-api
+- aid: seon-tech:seon-tech-phone-api
+  name: SEON Phone API
+  description: The Phone API from SEON — 1 operation(s) for phone.
+  humanURL: https://docs.seon.io/api-reference/fraud-api
+  baseURL: https://api.seon.io/SeonRestService/fraud-api/v2/
+  tags:
+  - Phone
+  properties:
+  - type: OpenAPI
+    url: openapi/seon-tech-phone-api-openapi.yml
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/fraud-api
+  - type: GettingStarted
+    url: https://docs.seon.io/getting-started
+  - type: Authentication
+    url: https://docs.seon.io/api-reference/introduction
+  - type: Plans
+    url: plans/seon-tech-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/seon-tech-rate-limits.yml
+  - type: FinOps
+    url: finops/seon-tech-finops.yml
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/email-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/phone-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/ip-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/bin-api
+  - type: Documentation
+    url: https://docs.seon.io/api-reference/aml-api
 common:
   - type: AgenticAccess
     url: agentic-access/seon-tech-agentic-access.yml
