@@ -1,0 +1,230 @@
+openapi: 3.1.0
+info:
+  title: SEON API
+  description: >-
+    SEON is a fraud prevention and AML compliance platform offering a modular
+    REST API architecture spanning the Fraud API and standalone Email, Phone,
+    IP, BIN, and AML enrichment APIs.
+  version: "1.0"
+  x-generated-from: https://docs.seon.io/api-reference
+  x-generated-by: claude-crawl-2026-05-25
+servers:
+  - url: https://api.seon.io
+    description: Default (EU) region
+  - url: https://api.us-east-1-main.seon.io
+    description: US region
+  - url: https://api.ap-southeast-1-main.seon.io
+    description: APAC region
+  - url: https://api.me-central-1-main.seon.io
+    description: Middle East region
+security:
+  - apiKey: []
+paths:
+  /SeonRestService/fraud-api/v2/:
+    post:
+      summary: Submit a fraud evaluation request
+      description: >-
+        Combines email, phone, IP, BIN, and AML signals with device
+        fingerprinting to return enriched data, rules, and risk scoring in a
+        single call.
+      operationId: submitFraudCheck
+      tags:
+        - Fraud
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericRequest'
+      responses:
+        '200':
+          description: Fraud evaluation result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericResponse'
+        default:
+          description: Error response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /SeonRestService/email-api/v3:
+    post:
+      summary: Enrich an email address
+      description: >-
+        Returns insights into the digital footprint associated with an email
+        address.
+      operationId: enrichEmail
+      tags:
+        - Email
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericRequest'
+      responses:
+        '200':
+          description: Email enrichment result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericResponse'
+        default:
+          description: Error response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /SeonRestService/phone-api/v2:
+    post:
+      summary: Enrich a phone number
+      description: >-
+        Returns risk scores, account aggregates, fraud history, carrier
+        details, and other phone intelligence data.
+      operationId: enrichPhone
+      tags:
+        - Phone
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericRequest'
+      responses:
+        '200':
+          description: Phone enrichment result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericResponse'
+        default:
+          description: Error response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /SeonRestService/ip-api/v1/{ip}:
+    get:
+      summary: Lookup IP address intelligence
+      description: Returns IP intelligence including history, flags, and identifiers.
+      operationId: lookupIp
+      tags:
+        - IP
+      parameters:
+        - in: path
+          name: ip
+          required: true
+          schema:
+            type: string
+          description: IPv4 or IPv6 address to evaluate.
+        - in: query
+          name: include
+          required: false
+          schema:
+            type: string
+          description: Comma-separated list of additional fields (history, flags, id).
+        - in: query
+          name: flags_timeframe_days
+          required: false
+          schema:
+            type: integer
+          description: Timeframe in days used when evaluating flags.
+      responses:
+        '200':
+          description: IP intelligence result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericResponse'
+        default:
+          description: Error response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /SeonRestService/bin-api/v1/{bin}:
+    get:
+      summary: Lookup BIN (card) information
+      description: >-
+        Returns information about a card's bank, issuer, country, type, and
+        validity for a given BIN (Bank Identification Number).
+      operationId: lookupBin
+      tags:
+        - BIN
+      parameters:
+        - in: path
+          name: bin
+          required: true
+          schema:
+            type: string
+          description: Bank Identification Number to evaluate.
+        - in: query
+          name: include
+          required: false
+          schema:
+            type: string
+          description: Optional include directives (e.g. id).
+      responses:
+        '200':
+          description: BIN information result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericResponse'
+        default:
+          description: Error response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /SeonRestService/aml-api/v1:
+    post:
+      summary: Submit an AML screening request
+      description: >-
+        Screens a user against PEP, sanctions, and high-risk lists for AML
+        compliance.
+      operationId: submitAmlCheck
+      tags:
+        - AML
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenericRequest'
+      responses:
+        '200':
+          description: AML screening result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericResponse'
+        default:
+          description: Error response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+  schemas:
+    GenericRequest:
+      type: object
+      additionalProperties: true
+    GenericResponse:
+      type: object
+      additionalProperties: true
+    Error:
+      type: object
+      additionalProperties: true
+      properties:
+        error:
+          type: string
+        message:
+          type: string
