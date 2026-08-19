@@ -31,7 +31,7 @@ tags:
 url: https://raw.githubusercontent.com/api-evangelist/seon-tech/refs/heads/main/apis.yml
 created: '2026-05-25'
 modified: '2026-08-08'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: seon-tech:device-intelligence
   name: SEON Device Intelligence
