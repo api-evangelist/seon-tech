@@ -1,0 +1,57 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SEON AML IP API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{X-API-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "IP",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lookup IP address intelligence",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.seon.io/SeonRestService/ip-api/v1/:ip",
+            "params": [
+              {
+                "name": "ip",
+                "value": "",
+                "type": "path",
+                "description": "IPv4 or IPv6 address to evaluate."
+              },
+              {
+                "name": "include",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of additional fields (history, flags, id)."
+              },
+              {
+                "name": "flags_timeframe_days",
+                "value": "",
+                "type": "query",
+                "description": "Timeframe in days used when evaluating flags."
+              }
+            ]
+          },
+          "docs": "Returns IP intelligence including history, flags, and identifiers."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

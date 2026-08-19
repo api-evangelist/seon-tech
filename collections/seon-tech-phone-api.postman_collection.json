@@ -1,0 +1,205 @@
+{
+  "item": [
+    {
+      "id": "4ddc1599-eac9-4545-b613-5aca4904e02d",
+      "name": "Phone",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0bd8063d-4ffe-4ee3-8816-36d7eabf5fdb",
+          "name": "Enrich a phone number",
+          "request": {
+            "name": "Enrich a phone number",
+            "description": {
+              "content": "Returns risk scores, account aggregates, fraud history, carrier details, and other phone intelligence data.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "SeonRestService",
+                "phone-api",
+                "v2"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": 8778,\n  \"key_1\": 9468\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b1645f5b-182a-433b-8c79-8fe1f7be1371",
+              "name": "Phone enrichment result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "SeonRestService",
+                    "phone-api",
+                    "v2"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": 9652.491326519126,\n  \"key_1\": 7411,\n  \"key_2\": 5070.1760636469735\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 9652.491326519126,\n  \"key_1\": 7411,\n  \"key_2\": 5070.1760636469735\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3a7f387d-8923-4531-a3b4-5ea3634a6eb5",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "SeonRestService",
+                    "phone-api",
+                    "v2"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": 9652.491326519126,\n  \"key_1\": 7411,\n  \"key_2\": 5070.1760636469735\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.seon.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-KEY"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "84eb992f-ddc1-41d7-965e-3b4b4907c0d9",
+    "name": "SEON AML Phone API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "SEON is a fraud prevention and AML compliance platform offering a modular REST API architecture spanning the Fraud API and standalone Email, Phone, IP, BIN, and AML enrichment APIs.",
+      "type": "text/plain"
+    }
+  }
+}

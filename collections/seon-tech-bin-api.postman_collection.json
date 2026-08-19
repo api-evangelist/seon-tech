@@ -1,0 +1,220 @@
+{
+  "item": [
+    {
+      "id": "9f4555f9-b587-4635-9fb3-34e31def3ccc",
+      "name": "BIN",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0c7bff97-b680-413d-9abb-9c03c6e87b06",
+          "name": "Lookup BIN (card) information",
+          "request": {
+            "name": "Lookup BIN (card) information",
+            "description": {
+              "content": "Returns information about a card's bank, issuer, country, type, and validity for a given BIN (Bank Identification Number).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "SeonRestService",
+                "bin-api",
+                "v1",
+                ":bin"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "include",
+                  "value": "<string>",
+                  "description": "Optional include directives (e.g. id)."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "bin",
+                  "description": "(Required) Bank Identification Number to evaluate."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "512e399a-dc4c-4e0d-bda8-d9f0c0c355b9",
+              "name": "BIN information result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "SeonRestService",
+                    "bin-api",
+                    "v1",
+                    ":bin"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "bin",
+                      "description": "(Required) Bank Identification Number to evaluate."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "090b8817-4dad-4e37-bd80-9828ed7856b5",
+              "name": "Error response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "SeonRestService",
+                    "bin-api",
+                    "v1",
+                    ":bin"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "bin",
+                      "description": "(Required) Bank Identification Number to evaluate."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.seon.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-KEY"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "9b93ac17-6e18-4588-8881-db109ef2bf3c",
+    "name": "SEON AML BIN API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "SEON is a fraud prevention and AML compliance platform offering a modular REST API architecture spanning the Fraud API and standalone Email, Phone, IP, BIN, and AML enrichment APIs.",
+      "type": "text/plain"
+    }
+  }
+}

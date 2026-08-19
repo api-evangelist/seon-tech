@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SEON AML Email API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{X-API-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Email",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Enrich an email address",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.seon.io/SeonRestService/email-api/v3",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Returns insights into the digital footprint associated with an email address."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

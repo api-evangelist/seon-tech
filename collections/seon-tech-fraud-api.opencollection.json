@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SEON AML Fraud API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{X-API-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Fraud",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit a fraud evaluation request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.seon.io/SeonRestService/fraud-api/v2/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Combines email, phone, IP, BIN, and AML signals with device fingerprinting to return enriched data, rules, and risk scoring in a single call."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

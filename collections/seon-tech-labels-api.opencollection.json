@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SEON REST AML Labels API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{X-API-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Labels",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Label scored transactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.seon.io/SeonRestService/fraud-api/transaction-label/v2",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Applies fraud-outcome labels (such as fraud_detection_fraud) to up to 50 previously scored transactions per request, feeding SEON's machine-learning models. A transaction can hold a single label at a time; existing labels can be overwritten."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,256 @@
+﻿# SEON Documentation
+
+
+## Knowledge Base
+
+
+### Interface
+
+
+- [Dashboard](https://docs.seon.io/knowledge-base/user-manuals/dashboard): SEON dashboard overview with real-time transaction monitoring and fraud insights.
+- [Transactions](https://docs.seon.io/knowledge-base/user-manuals/transactions): Transactions page for reviewing, filtering, and analyzing transaction data and trends.
+- [Transaction Details](https://docs.seon.io/knowledge-base/user-manuals/transaction-details): An overview of the different tabs of the Transactions Details page.
+- [Customers](https://docs.seon.io/knowledge-base/user-manuals/customers): Analyse customers based on their details, actions and connections.
+- [Alerts](https://docs.seon.io/knowledge-base/user-manuals/alerts): Review alerts and enable, disable or create alert triggers from this page.
+- [Cases](https://docs.seon.io/knowledge-base/user-manuals/cases): Create, investigate and manage cases from this page.
+- [Manual Lookup](https://docs.seon.io/knowledge-base/user-manuals/manual-page): Enrich data manually without an API integration using the Manual Lookup page.
+- [AML](https://docs.seon.io/knowledge-base/user-manuals/aml): The AML page is the heart of your anti-money laundering efforts where you can review AML checks and enable automatic AML monitoring.
+- [Scoring Engine](https://docs.seon.io/knowledge-base/user-manuals/scoring-engine-and-rules): Customize rules to fit your risk appetite.
+- [Lists](https://docs.seon.io/knowledge-base/user-manuals/lists-and-flagging): Your go-to place to manage all blacklisted, whitelisted and flagged values.
+- [Monitoring](https://docs.seon.io/knowledge-base/user-manuals/workbench): Monitoring the Machine Learning system performance.
+- [Channels](https://docs.seon.io/knowledge-base/user-manuals/merchants-affiliates): View the number of transactions or the amount of all transactions in different states by each merchant.
+- [Settings](https://docs.seon.io/knowledge-base/user-manuals/settings): Adjust the workings of the admin and the interface to fit your operations.
+- [API License Keys](https://docs.seon.io/knowledge-base/user-manuals/api-license-keys): Create API license keys directly from the Admin panel for added security and flexibility.
+- [Logs](https://docs.seon.io/knowledge-base/user-manuals/logs): View every user action within the SEON Admin Panel within the Logs page.
+- [Four-Eye Principle](https://docs.seon.io/knowledge-base/user-manuals/four-eye-principle): The four-eye principle requires sensitive changes to be reviewed and approved by a second user before they take effect.
+- [Sandbox Environment](https://docs.seon.io/knowledge-base/user-manuals/sandbox-environment): Explanation of the SEON test environment.
+
+
+### Transactions & Scoring
+
+
+- [Scoring Engine Overview](https://docs.seon.io/knowledge-base/transactions-scoring/scoring-engine-overview): The Scoring Engine is SEON's core decisioning system, designed to empower businesses with advanced fraud prevention capabilities.
+- [Transactions Overview](https://docs.seon.io/knowledge-base/transactions-scoring/transactions-overview): The Transactions page is your central hub for reviewing individual transactions in SEON.
+- [Default Rules](https://docs.seon.io/knowledge-base/transactions-scoring/default-rules): To help you get started from day one, SEON contains a collection of default rules.
+- [Custom Rules and Parameters](https://docs.seon.io/knowledge-base/transactions-scoring/custom-rules-and-parameters): Create custom rules and fight fraud your own way.
+- [Risk Signals](https://docs.seon.io/knowledge-base/transactions-scoring/risk-signals): Risk signals are color-coded tags in SEON that highlight fraud risk at a glance, powered by rules from SEON's fraud library.
+- [Custom Fields and Industry-Specific Widgets](https://docs.seon.io/knowledge-base/transactions-scoring/custom-fields-and-industry-specific-widgets): Learn about how custom fields appear on the Transaction Details page and other unique widgets.
+- [Digital Footprint Widgets](https://docs.seon.io/knowledge-base/transactions-scoring/digital-footprint-widgets): Understand the hundreds of data points unlocked by SEON's Digital Footprint tools.
+- [Automated Chargeback Management](https://docs.seon.io/knowledge-base/transactions-scoring/chargeback-management): SEON's chargeback management tools and how to use them.
+- [Similarity Features](https://docs.seon.io/knowledge-base/transactions-scoring/similarity-features): Compare data points to identify suspicious multi-accounting or blacklist evasion attempts.
+- [Lists & Flagging Overview](https://docs.seon.io/knowledge-base/transactions-scoring/lists-and-flagging-overview): Learn how to manage blacklisted, whitelisted and flagged values in your account.
+- [Rule Categories](https://docs.seon.io/knowledge-base/transactions-scoring/rule-categories): Rule categories act as folders for your rules and enable powerful customization settings.
+- [Custom Scoring and States with Rule Categories](https://docs.seon.io/knowledge-base/transactions-scoring/set-up-custom-scoring-and-states-with-rule-categories): Group rules and automatically apply a unique score or state to all transactions that trigger a rule in these categories.
+- [Lightning Track](https://docs.seon.io/knowledge-base/transactions-scoring/lightning-track): Lightning track can reduce fraud prevention response times to a few hundred milliseconds.
+- [Transaction Details – General Widgets](https://docs.seon.io/knowledge-base/transactions-scoring/transaction-details-general-widgets): An overview of the different tabs of the Transactions Details page.
+- [How to Use Regular Aggregates](https://docs.seon.io/knowledge-base/transactions-scoring/how-to-use-regular-aggregates): Guide to using aggregate data, a high-level form of data created by combining single data points.
+- [How to Create a New Filter](https://docs.seon.io/knowledge-base/transactions-scoring/how-to-create-a-new-filter): Filters help you get the best results with SEON, learn how to use them.
+- [How to Run a Batch Test](https://docs.seon.io/knowledge-base/transactions-scoring/how-to-run-a-batch-test): Automatically check thousands of transactions in a single batch by uploading a CSV or XLSX file.
+- [Assigning Transactions for Review](https://docs.seon.io/knowledge-base/transactions-scoring/assigning-transactions-for-review): Assign transactions to other team members to review.
+- [Streamlining Teamwork with Proposed System-Level Changes](https://docs.seon.io/knowledge-base/transactions-scoring/streamlining-teamwork-with-proposed-system-level-changes-and-approvals): Add an additional approval layer for significant system modifications such as blacklisting and rule adjustments.
+- [Tagging Transactions](https://docs.seon.io/knowledge-base/transactions-scoring/tagging-transactions): Tagging helps categorize transactions, making reviews easier and enabling more precise rule creation.
+- [Clone Search](https://docs.seon.io/knowledge-base/transactions-scoring/clone-search): Identify duplicate, synthetic or highly similar customer data values to uncover suspicious patterns.
+- [How to Run Post-Decision Automations](https://docs.seon.io/knowledge-base/transactions-scoring/how-to-run-post-decision-automations): Trigger custom workflows to handle suspicious events and users quickly with minimal manual effort.
+- [Rule Configuration Guide: Best Practices for High Performance](https://docs.seon.io/knowledge-base/transactions-scoring/rule-configuration-guide:-best-practices-for-high-performance): Best practices for configuring high-performance rules in SEON's scoring engine.
+- [Network Analysis](https://docs.seon.io/knowledge-base/transactions-scoring/network-analysis): Reveal hidden links between customer profiles to detect fraud rings and reduce false positives.
+- [Score Calculation Logic](https://docs.seon.io/knowledge-base/transactions-scoring/score-calculation-logic): How fraud scores are calculated and how rules, states and similarity affect the final outcome.
+
+
+### Device Intelligence
+
+
+- [Device Intelligence Overview](https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-overview): An introduction to SEON's device intelligence tools and all the valuable insights you can unlock.
+- [What Makes SEON's Device Intelligence Unique](https://docs.seon.io/knowledge-base/device-intelligence/what-makes-seon's-device-intelligence-unique): See how SEON's Device Intelligence tools can help you protect your business.
+- [Device Intelligence Integration Options](https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-integration-options): Learn how to integrate SEON's Device Intelligence into your website or app.
+- [Understanding Hashes: Device Identification](https://docs.seon.io/knowledge-base/device-intelligence/understanding-hashes:-device-identification-with-seon's-device-intelligence): Learn about how hashes can help you catch fraudsters.
+- [Device Intelligence Widget](https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-widget): Learn all about the device specifications you can find in the Devices & OS widget.
+- [Get Started with Device Intelligence Rules](https://docs.seon.io/knowledge-base/device-intelligence/get-started-with-device-intelligence-rules): Unlock the full fraud-fighting potential of SEON's Device Intelligence solutions by creating custom rules.
+- [Block Multi-Accounting with Device Intelligence](https://docs.seon.io/knowledge-base/device-intelligence/block-multi-accounting-with-device-intelligence): Counter multi-accounting attempts with the power of device fingerprinting.
+- [How to Identify AI Agents, Device Farms and Automation Fraud](https://docs.seon.io/knowledge-base/device-intelligence/how-to-identify-ai-agents-device-farms-and-automation-fraud-with-suspicious-flags): A comprehensive reference for all available suspicious flags across SEON's device intelligence features.
+- [Residential Proxy and VPN Detection](https://docs.seon.io/knowledge-base/device-intelligence/residential-proxy-and-vpn-detection): Learn how detecting proxies and VPNs and using this data in default and custom rules can help protect your business.
+- [Understanding Geolocation Data with Device Fingerprinting](https://docs.seon.io/knowledge-base/device-intelligence/understanding-geolocation-data-with-device-fingerprinting): Geolocation data will fortify your fraud detection capabilities while also ensuring compliance with geolocation regulations.
+- [Understanding Behavioral Data Signals with Device Intelligence](https://docs.seon.io/knowledge-base/device-intelligence/understanding-behavioral-data-signals-with-device-intelligence): Behavioral biometrics and device intelligence analyze unique user behavior patterns and device characteristics for advanced fraud prevention.
+- [Remote Access Detection](https://docs.seon.io/knowledge-base/device-intelligence/remote-access-detection-with-seon's-device-intelligence-sdks): Device intelligence solution for identifying remote access risk and remote access scams.
+- [True Device ID](https://docs.seon.io/knowledge-base/device-intelligence/true-device-id-device-identification-with-seon-device-intelligence): A next-generation, more resilient identifier that assigns a unique ID to each device, designed to overcome limitations of traditional tracking techniques.
+
+
+### Identity Verification
+
+
+- [Identity Verification Solution](https://docs.seon.io/knowledge-base/idv/identity-verification-solution): A comprehensive overview of SEON's AI-powered identity verification solution, combining document checks, biometrics and enriched fraud signals.
+- [Document Verification](https://docs.seon.io/knowledge-base/idv/document-verification): Supported documents, verification flow, fraud checks, OCR extraction, user guidance and SDK integration.
+- [eKYC](https://docs.seon.io/knowledge-base/idv/ekyc): Verify user identities in real time by matching personal data against official government, credit bureau and telco databases.
+- [Selfie and Liveness Detection](https://docs.seon.io/knowledge-base/idv/selfie-and-liveness-detection): AI-powered selfie and liveness check that confirms user presence, prevents spoofing, and biometrically matches the user to their ID.
+- [Proof of Address](https://docs.seon.io/knowledge-base/idv/proof-of-address): Validates residential address documents, detects tampering and enriches results with fraud signals.
+- [Additional Verification Checks](https://docs.seon.io/knowledge-base/idv/additional-verification-checks): Field-level verification checks that validate specific data points from identity documents.
+- [Duplicate Detection](https://docs.seon.io/knowledge-base/idv/duplicate-detection): Detect and block repeat applicants and multi-accounting by matching biometric and identity data across all verification sessions.
+- [Session Management and Configuration](https://docs.seon.io/knowledge-base/idv/session-management-and-configuration): Configure and manage verification sessions to reduce abandonment, control risk thresholds and optimize performance.
+- [Integration and Webhooks](https://docs.seon.io/knowledge-base/idv/integration-and-webhooks): Integrate identity verification using SDKs, APIs, hosted flows and event-driven webhooks.
+- [Branding and Customization](https://docs.seon.io/knowledge-base/idv/branding-and-customization): What you can customize and which parts of the verification flow remain standardized.
+- [Course Correction and Retries](https://docs.seon.io/knowledge-base/idv/course-correction-and-retries): Guide users to self-correct during verification and control how many attempts are allowed before a session is invalidated.
+
+
+### Workflows
+
+
+- [Workflows](https://docs.seon.io/knowledge-base/workflows/workflows): Design, deploy, and manage end-to-end identity verification workflows using a no-code builder to dynamically route users based on risk and compliance requirements.
+- [Building a Workflow](https://docs.seon.io/knowledge-base/workflows/how-to-build-a-workflow): Build and configure identity verification workflows using the visual editor to control verification steps and define final decisions.
+- [Managing Workflows](https://docs.seon.io/knowledge-base/workflows/how-to-manage-workflows): Manage, monitor and update identity verification workflows by controlling access, editing safely, and tracking performance.
+- [Reviewing Workflow Runs](https://docs.seon.io/knowledge-base/workflows/reviewing-workflow-runs): Find, filter and investigate workflow runs to understand the full verification journey and take manual actions.
+- [Integrating Workflows](https://docs.seon.io/knowledge-base/workflows/how-to-integrate-workflows): Set up workflows using the Web SDK or API to run identity verification automatically and receive real-time results via webhooks.
+- [Generating Shareable Verification Links](https://docs.seon.io/knowledge-base/workflows/generating-shareable-verification-links): Create one-time verification links from the admin interface to start user verification sessions without a full integration.
+
+
+### Anti-Money Laundering
+
+
+- [AML Compliance Solution](https://docs.seon.io/knowledge-base/data-enrichment/aml-compliance-solution): Identify and monitor high-risk individuals or entities against global sanctions, watchlists, crime lists, PEP databases and adverse media sources.
+- [Payment Screening](https://docs.seon.io/knowledge-base/data-enrichment/payment-screening): Screen payments in real time against global sanctions, PEP, watchlists and adverse media.
+- [AML Data Sources](https://docs.seon.io/knowledge-base/data-enrichment/aml-data-sources): A list of all lists and databases the AML API checks when you run lookups.
+- [Configure Screening & Monitoring Settings](https://docs.seon.io/knowledge-base/data-enrichment/configure-screening-and-monitoring-settings): Learn how to configure API-based screening and monitoring settings to tailor SEON's data enrichment to your needs.
+- [Integration Methods & API Access](https://docs.seon.io/knowledge-base/data-enrichment/integration-methods-and-api-access): Overview of integration methods and API access options for AML features.
+- [Optimize Screening with Fuzzy Search](https://docs.seon.io/knowledge-base/data-enrichment/optimize-screening-with-fuzzy-search): Customize your AML API integration to broaden results or reduce false negatives and ensure compliance.
+- [Entity Search](https://docs.seon.io/knowledge-base/data-enrichment/entity-search): Uncover suspicious businesses, vessels, NGOs, and other organizations via entity search.
+- [Brazil Sports Betting Compliance (SPA Check)](https://docs.seon.io/knowledge-base/data-enrichment/brazil-sports-betting-compliance-(spa-check)): Identify individuals restricted from sports betting in alignment with Brazilian responsible gaming regulations.
+- [Search Profiles](https://docs.seon.io/knowledge-base/data-enrichment/search-profiles): Search profiles let you match your screening intensity to each customer's risk level.
+- [Manual Lookup & Batch Screening](https://docs.seon.io/knowledge-base/data-enrichment/manual-lookup-and-batch-screening): Perform AML checks on the Manual Lookup page without the need for an API integration.
+- [Review Customer Screening Hits](https://docs.seon.io/knowledge-base/data-enrichment/review-customer-screening-hits): Access and review AML screening hits with detailed risk insights and case management tools.
+- [AML Screening Agent](https://docs.seon.io/knowledge-base/data-enrichment/aml-screening-agent): AI-powered tool that empowers AML teams to rapidly sift through customer screening matches and identify false positives.
+
+
+### Case Management
+
+
+- [Case Management Overview](https://docs.seon.io/knowledge-base/case-management/case-management-overview): Technologies and strategies for detecting, investigating, and reporting suspicious activities with SEON.
+- [Configuring Roles & Permissions](https://docs.seon.io/knowledge-base/case-management/configuring-roles-and-permissions): Define and assign roles that regulate access to tools and data to enhance security and ensure focused team responsibilities.
+- [Creating & Managing Alert Triggers](https://docs.seon.io/knowledge-base/case-management/creating-and-managing-alert-triggers): Set up triggers that will activate alerts your team needs to investigate.
+- [Handling and Resolving Alerts](https://docs.seon.io/knowledge-base/case-management/handling-and-resolving-alerts): Everything you need to know about assigning and managing alerts within SEON.
+- [Conducting Case Investigations](https://docs.seon.io/knowledge-base/case-management/conducting-case-investigations): Learn how to create and manage cases within the SEON platform.
+- [Filing Regulatory Reports](https://docs.seon.io/knowledge-base/case-management/filing-regulatory-reports): Filing SAR reports with SEON's prefilling capabilities and AI-generated SAR form fillings.
+- [Integrating & Optimizing Data Flows](https://docs.seon.io/knowledge-base/case-management/integrating-and-optimizing-data-flows): Tools and data to manage high-volume transaction environments and determined fraudsters.
+
+
+### AI & Machine Learning
+
+
+- [AI and Machine Learning](https://docs.seon.io/knowledge-base/machine-learning/ai-and-machine-learning): Learn how SEON's AI tools accelerate fraud detection with insights, summaries, rule suggestions and feedback loops.
+- [AI Insights Score and Explanation](https://docs.seon.io/knowledge-base/machine-learning/ai-insights-score-and-explanation): Understand SEON's real-time AI fraud probability score, how it works and how to interpret its explainability.
+- [AI Rule Suggestions](https://docs.seon.io/knowledge-base/machine-learning/ai-rule-suggestions): Discover how SEON generates accurate, human-readable fraud rules from your transaction data.
+- [AI Summary](https://docs.seon.io/knowledge-base/machine-learning/ai-summary): The AI summary tool explains in plain language why a transaction or alert was blocked, approved or sent for review.
+- [Understanding a Confusion Matrix](https://docs.seon.io/knowledge-base/machine-learning/understanding-a-confusion-matrix): An overview of testing rules and machine learning performance with confusion matrices in SEON.
+- [Email Clusters](https://docs.seon.io/knowledge-base/machine-learning/email-clusters): Identify and group likely algorithmically generated email addresses to enhance fraud detection.
+- [Digital Footprint: Email & Phone Network Scores](https://docs.seon.io/knowledge-base/machine-learning/digital-footprint:-email-and-phone-network-scores): How SEON's base models provide instant risk scores and evolve into bespoke models tailored to your data.
+- [Labeling Best Practices](https://docs.seon.io/knowledge-base/machine-learning/labeling-best-practices): Learn how to provide timely, precise transaction labels to improve SEON's AI model accuracy.
+- [Labels vs Tags](https://docs.seon.io/knowledge-base/machine-learning/labels-vs-tags): Understand the difference between labels that train SEON's models and tags that organize transactions.
+- [How to Interpret SEON's Risk Scores](https://docs.seon.io/knowledge-base/machine-learning/how-to-interpret-seon's-risk-scores): See how SEON's rule-based and AI-driven scores reveal fraud signals across transactions, devices, emails, phones and IPs.
+
+
+### Settings
+
+
+- [Upgrade Your Account to a Paid Plan](https://docs.seon.io/knowledge-base/settings/upgrade-your-account-to-a-paid-plan): Continue using SEON after your free trial by upgrading to a paid plan from the Admin Panel.
+- [Setting Priority Platform Timeouts](https://docs.seon.io/knowledge-base/settings/setting-priority-platform-timeouts): Learn how to set the sites most important to your decision-making process as priority platforms.
+- [How to Adjust Digital Footprint Timeout](https://docs.seon.io/knowledge-base/settings/how-to-adjust-digital-footprint-timeout): Configuring your timeouts properly is a core element of getting the most from SEON.
+- [SSO with Azure AD](https://docs.seon.io/knowledge-base/settings/sso-with-azure-ad): SSO with Azure AD allows your team to sign in to SEON using their Microsoft account.
+- [SSO with Ping Identity](https://docs.seon.io/knowledge-base/settings/sso-with-ping-identity): A step-by-step guide to setting up Ping Identity as your SSO provider for SEON.
+- [SSO with Okta](https://docs.seon.io/knowledge-base/settings/sso-with-okta): A step-by-step guide to setting up Okta as your SSO provider for SEON.
+- [SSO with Google](https://docs.seon.io/knowledge-base/settings/sso-with-google-setup-guide): A step-by-step guide to setting up Google Identity as your SSO provider for SEON.
+
+
+### SEON for Shopify
+
+
+- [Quick Start Guide to SEON for Shopify](https://docs.seon.io/knowledge-base/shopify/quick-start-guide): Connecting SEON to your Shopify store is easy. Find out more in this quick guide.
+- [Tweak Your SEON for Shopify Settings](https://docs.seon.io/knowledge-base/shopify/tweak-and-customize-your-seon-for-shopify-settings): Advanced customization options to get the most out of SEON for Shopify.
+- [Customize Your Risk Appetite with SEON for Shopify](https://docs.seon.io/knowledge-base/shopify/customize-your-risk-appetite-with-seon-for-shopify): Quickly update the fraud score thresholds for SEON's fraud prevention recommendations.
+- [Capture Shopify Payments with SEON](https://docs.seon.io/knowledge-base/shopify/capture-shopify-payments-with-seon): Reduce risk with better automation for capturing payments after fraud checks.
+- [Chargeback Management for Shopify](https://docs.seon.io/knowledge-base/shopify/chargeback-management-shopify): SEON for Shopify chargeback management tools and how to use them.
+- [Hold the Order Fulfillment in Shopify](https://docs.seon.io/knowledge-base/shopify/hold-the-order-fulfillment-in-shopify): Put a hold on order fulfillment when SEON recommends an order is risky.
+- [Cancel Risky Shopify Orders Automatically](https://docs.seon.io/knowledge-base/shopify/cancel-risky-shopify-orders-automatically): Automatically cancel Shopify orders SEON recommends you decline because of fraud risks.
+- [Checking Orders with SEON for Shopify](https://docs.seon.io/knowledge-base/shopify/checking-orders-with-seon): SEON's fraud recommendation for each order placed on your Shopify store.
+- [SEON for Shopify Admin Extensions](https://docs.seon.io/knowledge-base/shopify/seon's-shopify-admin-extensions): Run checks on any past order with SEON's Shopify admin extensions.
+- [How to Send Custom Order Information to SEON](https://docs.seon.io/knowledge-base/shopify/how-to-send-custom-order-information-to-seon): Send custom data fields to SEON with external tools to add more details to order analysis.
+- [SEON Shopify Agent for Custom Storefronts](https://docs.seon.io/knowledge-base/shopify/seon-shopify-agent-for-custom-storefronts): Learn how to integrate the SEON browser agent into custom Shopify storefronts.
+- [SEON for Shopify FAQ](https://docs.seon.io/knowledge-base/shopify/shopify-faq): Get all your questions around the SEON Shopify app answered.
+
+
+### Whitepapers
+
+
+- [Manual Processes – Fraud Investigation](https://docs.seon.io/knowledge-base/whitepapers/manual-processes-fraud-investigation): A step by step guide for conducting manual reviews.
+- [Dynamic Friction – Bringing Pre-KYC into the Mix](https://docs.seon.io/knowledge-base/whitepapers/dynamic-friction-light-vs.-heavy-kyc): Explaining the importance of dynamic friction during KYC.
+- [SEON Compliance Whitepaper](https://docs.seon.io/knowledge-base/whitepapers/seon-compliance-whitepaper): A summary of SEON's legal and security processes.
+- [Build a Machine Learning Model Using SEON Data](https://docs.seon.io/knowledge-base/whitepapers/build-a-machine-learning-model-using-seon-data): Read how you can build a machine learning model using data from SEON's data enrichment process.
+- [How to Make the Most Out of Your Machine Learning Model](https://docs.seon.io/knowledge-base/whitepapers/how-to-make-the-most-out-of-your-machine-learning-model): Recommended data points to add to your existing machine learning model for maximum fraud prevention benefit.
+
+
+
+
+
+
+
+
+
+
+
+
+## Integration
+
+
+- [Integration Process](https://docs.seon.io/integration/integration-process): The SEON integration process ensures a seamless onboarding experience, enabling you to deploy and optimize fraud prevention solutions efficiently.
+- [Proof of Value Process](https://docs.seon.io/integration/proof-of-value-process): A targeted approach to evaluate SEON's effectiveness in meeting your specific fraud prevention needs via live PoC or batch test.
+- [API Integration Guide](https://docs.seon.io/integration/api-integration-guide): A comprehensive guide to integrating SEON's APIs into your platform.
+- [Digital Footprint](https://docs.seon.io/integration/timeouts): Configure timeout settings for SEON's Digital Footprint enrichment tools.
+- [Customer Screening & Monitoring](https://docs.seon.io/integration/customer-screening-and-monitoring): Integrate and configure SEON's customer screening and ongoing monitoring capabilities.
+- [Single Sign-On](https://docs.seon.io/integration/sso): Set up SSO for your team to access SEON using your existing identity provider.
+- [User Management](https://docs.seon.io/integration/user-management): Manage user roles, permissions and access within the SEON platform.
+- [Get the Most Out of AI & Machine Learning](https://docs.seon.io/integration/get-the-most-out-of-ai-and-machine-learning): Learn how to maximize the value of SEON's AI and machine learning capabilities.
+- [Device Intelligence](https://docs.seon.io/integration/device-intelligence): Integrate SEON's device fingerprinting and behavioral intelligence tools into your web or mobile application.
+- [Orchestration](https://docs.seon.io/integration/orchestration): Combine SEON's fraud detection and identity verification tools into end-to-end orchestrated workflows.
+
+
+## API Reference
+
+
+### Core APIs
+
+
+- [Introduction](https://docs.seon.io/api-reference/introduction): Overview of SEON's API architecture, authentication, rate limits, timeout logic and the three-step integration model.
+- [API Policy](https://docs.seon.io/api-reference/api-policy): SEON's API usage policies and guidelines.
+- [Fraud API](https://docs.seon.io/api-reference/fraud-api): A modular API that combines email, phone, IP, BIN, and AML data with device fingerprinting for enriched data, rules, and scoring in a single API call.
+- [Workflow API](https://docs.seon.io/api-reference/workflow-api): Initialize and manage verification workflows that combine document verification, selfie checks, fraud detection, and AML screening in a single orchestrated flow.
+- [Tag API](https://docs.seon.io/api-reference/tag-api): Categorize transactions with tags that can be managed and filtered directly from the SEON Admin Panel.
+- [Label API](https://docs.seon.io/api-reference/label-api): Automate feedback into SEON's machine learning algorithms to reduce false positives and negatives.
+- [Lists API](https://docs.seon.io/api-reference/lists-api): Add data points to blacklists, whitelists, or custom lists with the ability to modify associated request and response parameters.
+- [Exclude User from Rule API](https://docs.seon.io/api-reference/exclude-user-from-rule-api): Prevent specific users from being affected by certain custom rules for flexible API-driven fraud management.
+- [Webhooks](https://docs.seon.io/api-reference/webhooks): Configure and receive real-time event notifications from SEON via webhooks.
+- [Errors](https://docs.seon.io/api-reference/errors): Detailed list of SEON API error codes and how to resolve them.
+- [API Changelog](https://docs.seon.io/api-reference/api-changelog): Keep track of changes and upgrades to the SEON API.
+
+
+### Standalone APIs
+
+
+- [AML API](https://docs.seon.io/api-reference/aml-api): Complement your fraud prevention toolkit with anti-money laundering tools for efficient and pain-free AML checks.
+- [AML Entity API](https://docs.seon.io/api-reference/aml-entity-api): Query organizations to determine whether they appear on any Sanctions or Watchlists.
+- [Email API](https://docs.seon.io/api-reference/email-api): Standalone email enrichment tool to learn about an email address's approximate age, provider, and any connected online profiles.
+- [Email Verification API](https://docs.seon.io/api-reference/email-verification-api): Quick email verification tool to determine whether an email address is valid and deliverable using a fast SMTP-MX check.
+- [Phone API](https://docs.seon.io/api-reference/phone-api): Unlock insights into a user's phone number history and social or digital profiles connected to it.
+- [IP API](https://docs.seon.io/api-reference/ip-api): Identify suspicious VPN and proxy connections and pinpoint users with accurate geolocation information.
+- [BIN API](https://docs.seon.io/api-reference/bin-api): Unearth information about a card's bank, issuer, country, type, and validity to counter payment fraud.
+- [Geofence API](https://docs.seon.io/api-reference/geofence-api): Analyze device geolocation against predefined geofences for compliance-ready location data and security insights.
+
+
+### Data Governance APIs
+
+
+- [Self Exclusion API](https://docs.seon.io/api-reference/self-exclusion-api): Enable self-exclusion lists for online gambling operators using email address, phone number, full name, date of birth, user country, and zip fields.
+- [Erase API](https://docs.seon.io/api-reference/erase-api): Erase all data related to one or multiple users by providing email addresses or user IDs, in compliance with data protection regulations.
+- [User Actions API](https://docs.seon.io/api-reference/user-actions-api): A security information and event management solution that sends Admin Panel log events between two specified points in time to a defined endpoint.
+
+
+### Other Resources
+
+
+- [Deprecated Versions](https://docs.seon.io/api-reference/deprecated-versions): Reference documentation for deprecated SEON API versions.
+- [Migration Guides](https://docs.seon.io/api-reference/migration-guides): Step-by-step guides for migrating from older SEON API versions to the latest.

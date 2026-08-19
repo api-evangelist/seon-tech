@@ -1,0 +1,208 @@
+{
+  "item": [
+    {
+      "id": "e86b577b-c75f-4304-a8f3-dae7ce4c5d5b",
+      "name": "Labels",
+      "description": {
+        "content": "Transaction outcome labeling for machine-learning feedback.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d8cb15a9-3135-49a1-8bb8-aded411f226b",
+          "name": "Label scored transactions",
+          "request": {
+            "name": "Label scored transactions",
+            "description": {
+              "content": "Applies fraud-outcome labels (such as fraud_detection_fraud) to up to 50 previously scored transactions per request, feeding SEON's machine-learning models. A transaction can hold a single label at a time; existing labels can be overwritten.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "SeonRestService",
+                "fraud-api",
+                "transaction-label",
+                "v2"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"transactions\": [\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    },\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "fd282840-a7a6-4637-ad94-96778c4a78c1",
+              "name": "Labeling result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "SeonRestService",
+                    "fraud-api",
+                    "transaction-label",
+                    "v2"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transactions\": [\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    },\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\"\n  },\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ae65f97d-e7c8-4edf-8bcd-76e9ecedcdf5",
+              "name": "Authentication failed - missing or invalid X-API-KEY.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "SeonRestService",
+                    "fraud-api",
+                    "transaction-label",
+                    "v2"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-KEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transactions\": [\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    },\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\"\n  },\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.seon.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-KEY"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "d2f1ad76-5c1c-4a19-8eaa-73059308c701",
+    "name": "SEON REST AML Labels API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "SEON's fraud prevention and anti-money-laundering REST API. Combines digital-footprint analysis, device fingerprinting, and machine-learning risk scoring to return real-time fraud scores and enriched intelligence from an email address, phone number, IP address, or full transaction payload, plus AML screening and transaction labeling. All requests authenticate with an X-API-KEY header and are case-sensitive.\n\nContact Support:\n Name: SEON Support\n Email: support@seon.io",
+      "type": "text/plain"
+    }
+  }
+}

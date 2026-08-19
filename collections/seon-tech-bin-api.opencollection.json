@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SEON AML BIN API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{X-API-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "BIN",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lookup BIN (card) information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.seon.io/SeonRestService/bin-api/v1/:bin",
+            "params": [
+              {
+                "name": "bin",
+                "value": "",
+                "type": "path",
+                "description": "Bank Identification Number to evaluate."
+              },
+              {
+                "name": "include",
+                "value": "",
+                "type": "query",
+                "description": "Optional include directives (e.g. id)."
+              }
+            ]
+          },
+          "docs": "Returns information about a card's bank, issuer, country, type, and validity for a given BIN (Bank Identification Number)."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

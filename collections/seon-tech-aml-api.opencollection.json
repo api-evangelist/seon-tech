@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "SEON AML API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-KEY",
+      "value": "{{X-API-KEY}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "AML",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit an AML screening request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.seon.io/SeonRestService/aml-api/v1",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Screens a user against PEP, sanctions, and high-risk lists for AML compliance."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
