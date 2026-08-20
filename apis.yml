@@ -83,6 +83,9 @@ apis:
   humanURL: https://seon.io/products/fraud-orchestration/
   tags:
   - Fraud Orchestration
+  - Workflows
+  tags_raw:
+  - Fraud Orchestration
   - Workflow
   properties:
   - type: Documentation
