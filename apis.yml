@@ -35,10 +35,11 @@ specificationVersion: '0.23'
 apis:
 - aid: seon-tech:device-intelligence
   name: SEON Device Intelligence
-  description: SEON Device Intelligence is the device-fingerprinting product surfaced through JavaScript,
-    iOS, Android, Flutter, React Native, Cordova, and Unity SDKs. Captured device signals (True Device
-    ID, hashes, behavioral biometrics, geolocation, remote-access detection, residential-proxy and VPN
-    detection) are returned via the Fraud API or User Session Monitoring stream.
+  description: >-
+    SEON Device Intelligence is the device-fingerprinting product surfaced through JavaScript, iOS, Android,
+    Flutter, React Native, Cordova, and Unity SDKs. Captured device signals (True Device ID, hashes, behavioral
+    biometrics, geolocation, remote-access detection, residential-proxy and VPN detection) are returned
+    via the Fraud API or User Session Monitoring stream.
   humanURL: https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-overview
   tags:
   - Device Fingerprinting
@@ -59,9 +60,10 @@ apis:
     url: https://github.com/seontechnologies/seon-unity-sdk-plugin
 - aid: seon-tech:idv
   name: SEON Identity Verification
-  description: SEON Identity Verification (IDV) is an AI-powered identity verification product combining
-    document checks, biometric liveness, and enriched fraud signals. Integration is via native iOS and
-    Android SDKs.
+  description: >-
+    SEON Identity Verification (IDV) is an AI-powered identity verification product combining document
+    checks, biometric liveness, and enriched fraud signals. Integration is via native iOS and Android
+    SDKs.
   humanURL: https://docs.seon.io/knowledge-base/idv/identity-verification-solution
   tags:
   - Biometrics
@@ -77,9 +79,10 @@ apis:
     url: https://github.com/seontechnologies/seon-idv-sdk-android-public
 - aid: seon-tech:orchestration
   name: SEON Orchestration
-  description: SEON Orchestration lets customers compose multi-step fraud, KYC, and risk workflows that
-    combine SEON enrichment with third-party providers. Integration is via the Orchestration SDKs for
-    iOS, Android, Flutter, React Native, and Cordova.
+  description: >-
+    SEON Orchestration lets customers compose multi-step fraud, KYC, and risk workflows that combine SEON
+    enrichment with third-party providers. Integration is via the Orchestration SDKs for iOS, Android,
+    Flutter, React Native, and Cordova.
   humanURL: https://seon.io/products/fraud-orchestration/
   tags:
   - Fraud Orchestration
@@ -102,9 +105,9 @@ apis:
     url: https://github.com/seontechnologies/seon-orchestration-sdk-cordova-public
 - aid: seon-tech:user-session-monitoring
   name: SEON User Session Monitoring
-  description: User Session Monitoring streams in-session behavioral, device, and risk signals for continuous
-    account-takeover and session-hijacking detection across web, iOS, and Android. Delivered via dedicated
-    Stream SDKs.
+  description: >-
+    User Session Monitoring streams in-session behavioral, device, and risk signals for continuous account-takeover
+    and session-hijacking detection across web, iOS, and Android. Delivered via dedicated Stream SDKs.
   humanURL: https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-overview
   tags:
   - Account Takeover
@@ -309,6 +312,16 @@ apis:
     url: https://docs.seon.io/api-reference/bin-api
   - type: Documentation
     url: https://docs.seon.io/api-reference/aml-api
+- aid: seon-tech:seon-tech-labels-api
+  name: SEON Labels API
+  description: Transaction outcome labeling for machine-learning feedback.
+  humanURL: https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-overview
+  baseURL: https://api.seon.io/SeonRestService/fraud-api/v2/
+  tags:
+  - Labels
+  properties:
+  - type: OpenAPI
+    url: openapi/seon-tech-labels-api-openapi.yml
 common:
 - type: AgenticAccess
   url: agentic-access/seon-tech-agentic-access.yml
