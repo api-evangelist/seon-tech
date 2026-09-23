@@ -1,0 +1,31 @@
+# Front Door AI Index — seon-tech — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: seon-tech
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: seon.io
+  final_host: seon.io
+  ownership: own
+  owner: seon-tech
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 27
+  host_score: 27
+  density: 18.28
+  words: 1477
+  tiers:
+    agentic: 4
+    core: 23
+    model: 0
+  ambiguous: 5
+  top_terms:
+    AI: 22
+    intelligence: 3
+    agent: 2
+    fine-tune: 2
+    AI agent: 1
+    machine learning: 1
+    prompts: 1

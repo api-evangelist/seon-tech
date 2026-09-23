@@ -1,12 +1,8 @@
 {
   "provider": "seon-tech",
   "sources": [
-    "seon-tech-aml-api-openapi.yml",
-    "seon-tech-bin-api-openapi.yml",
-    "seon-tech-email-api-openapi.yml",
-    "seon-tech-fraud-api-openapi.yml",
-    "seon-tech-ip-api-openapi.yml",
-    "seon-tech-phone-api-openapi.yml"
+    "_ae-authored/seon-tech-openapi.yml",
+    "seon-tech-labels-api-openapi.yml"
   ],
   "outputs": [
     "seon-tech-aml-api-openapi.yml",
@@ -14,11 +10,31 @@
     "seon-tech-email-api-openapi.yml",
     "seon-tech-fraud-api-openapi.yml",
     "seon-tech-ip-api-openapi.yml",
-    "seon-tech-phone-api-openapi.yml"
+    "seon-tech-phone-api-openapi.yml",
+    "seon-tech-labels-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
-  "warnings": [],
-  "notes": [],
-  "skipped": []
+  "warnings": [
+    "seon-tech-labels-api-openapi.yml: previously refined output kept for 1 operation(s) no archived document covers (e.g. /SeonRestService/fraud-api/transaction-label/v2 put); its other 0 operation(s) came from the archive and were dropped from it. The archive is incomplete for this provider \u2014 re-harvest to restore _original/ as the full source of truth."
+  ],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "seon-tech-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "seon-tech-openapi.yml: declared missing tag: AML",
+    "seon-tech-openapi.yml: declared missing tag: BIN",
+    "seon-tech-openapi.yml: declared missing tag: Email",
+    "seon-tech-openapi.yml: declared missing tag: Fraud",
+    "seon-tech-openapi.yml: declared missing tag: IP",
+    "seon-tech-openapi.yml: declared missing tag: Phone",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "seon-tech-aml-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "seon-tech-bin-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "seon-tech-email-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "seon-tech-fraud-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "seon-tech-ip-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "seon-tech-phone-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

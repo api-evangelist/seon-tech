@@ -1,0 +1,1 @@
+{"resource":"https://mcp.seon.io/mcp","resource_name":"seon-mcp-server","resource_version":"1.0.0","resource_documentation":"https://github.com/seontechnologies/seon-mcp-server","bearer_methods_supported":["header"],"authorization_servers":["https://login.seon.io"],"scopes_supported":["tools:read"]}

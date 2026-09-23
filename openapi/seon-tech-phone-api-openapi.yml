@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: SEON AML Phone API
+  title: SEON Phone API
   description: SEON is a fraud prevention and AML compliance platform offering a modular REST API architecture spanning the Fraud API and standalone Email, Phone, IP, BIN, and AML enrichment APIs.
   version: '1.0'
   x-generated-from: https://docs.seon.io/api-reference
@@ -47,12 +47,6 @@ paths:
                 $ref: '#/components/schemas/Error'
 components:
   schemas:
-    GenericResponse:
-      type: object
-      additionalProperties: true
-    GenericRequest:
-      type: object
-      additionalProperties: true
     Error:
       type: object
       additionalProperties: true
@@ -61,6 +55,12 @@ components:
           type: string
         message:
           type: string
+    GenericResponse:
+      type: object
+      additionalProperties: true
+    GenericRequest:
+      type: object
+      additionalProperties: true
   securitySchemes:
     apiKey:
       type: apiKey
