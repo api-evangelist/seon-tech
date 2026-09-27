@@ -40,7 +40,21 @@ paths:
         '401':
           $ref: '#/components/responses/Unauthorized'
 components:
+  responses:
+    Unauthorized:
+      description: Authentication failed - missing or invalid X-API-KEY.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericResponse'
   schemas:
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
     LabelRequest:
       type: object
       required:
@@ -69,20 +83,6 @@ components:
           $ref: '#/components/schemas/Error'
         data:
           type: object
-    Error:
-      type: object
-      properties:
-        code:
-          type: string
-        message:
-          type: string
-  responses:
-    Unauthorized:
-      description: Authentication failed - missing or invalid X-API-KEY.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/GenericResponse'
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
