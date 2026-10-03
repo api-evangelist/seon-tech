@@ -55,10 +55,10 @@ components:
           type: string
         message:
           type: string
-    GenericResponse:
+    GenericRequest:
       type: object
       additionalProperties: true
-    GenericRequest:
+    GenericResponse:
       type: object
       additionalProperties: true
   securitySchemes:

@@ -40,13 +40,6 @@ paths:
         '401':
           $ref: '#/components/responses/Unauthorized'
 components:
-  responses:
-    Unauthorized:
-      description: Authentication failed - missing or invalid X-API-KEY.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/GenericResponse'
   schemas:
     Error:
       type: object
@@ -55,6 +48,15 @@ components:
           type: string
         message:
           type: string
+    GenericResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        error:
+          $ref: '#/components/schemas/Error'
+        data:
+          type: object
     LabelRequest:
       type: object
       required:
@@ -74,15 +76,13 @@ components:
               label:
                 type: string
                 description: A predefined label value such as fraud_detection_fraud or bnpl_credit_risk_default.
-    GenericResponse:
-      type: object
-      properties:
-        success:
-          type: boolean
-        error:
-          $ref: '#/components/schemas/Error'
-        data:
-          type: object
+  responses:
+    Unauthorized:
+      description: Authentication failed - missing or invalid X-API-KEY.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GenericResponse'
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
