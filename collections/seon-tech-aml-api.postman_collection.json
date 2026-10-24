@@ -1,179 +1,204 @@
 {
+  "info": {
+    "_postman_id": "bbbd51c1-64bf-4a80-8e7b-9c41c51f998f",
+    "name": "SEON AML API",
+    "description": "SEON is a fraud prevention and AML compliance platform offering a modular REST API architecture spanning the Fraud API and standalone Email, Phone, IP, BIN, and AML enrichment APIs.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T03:12:32.000Z",
+    "updatedAt": "2026-10-22T03:12:33.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-bbbd51c1-64bf-4a80-8e7b-9c41c51f998f"
+  },
   "item": [
     {
-      "id": "1db95215-7e82-4c44-8444-fcde673bf0e5",
-      "name": "AML",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "SeonRestService",
       "item": [
         {
-          "id": "a09c8dab-b647-48ee-9b97-541019fcde50",
-          "name": "Submit an AML screening request",
-          "request": {
-            "name": "Submit an AML screening request",
-            "description": {
-              "content": "Screens a user against PEP, sanctions, and high-risk lists for AML compliance.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "SeonRestService",
-                "aml-api",
-                "v1"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"key_0\": \"string\",\n  \"key_1\": true,\n  \"key_2\": 6935.932316507891\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
+          "name": "aml-api",
+          "item": [
             {
-              "id": "172da6a6-bc88-477d-9c2f-fe2aa91efabf",
-              "name": "AML screening result",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "SeonRestService",
-                    "aml-api",
-                    "v1"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "X-API-KEY",
-                    "value": "<API Key>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"key_0\": false,\n  \"key_1\": 6529\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "v1",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "Submit an AML screening request",
+                  "id": "1446d4f7-e3d3-4457-ae0e-517cb669eb92",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"est_e0\": 28731900.975389868,\n  \"aliquip_44a\": -30397578.061820686,\n  \"ipsum_a_5\": false\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/SeonRestService/aml-api/v1",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "SeonRestService",
+                        "aml-api",
+                        "v1"
+                      ]
+                    },
+                    "description": "Screens a user against PEP, sanctions, and high-risk lists for AML compliance."
+                  },
+                  "response": [
+                    {
+                      "id": "6c576d03-76ab-4bca-8f9c-b7e7f1a23a66",
+                      "name": "AML screening result",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "X-API-KEY",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"est_e0\": 28731900.975389868,\n  \"aliquip_44a\": -30397578.061820686,\n  \"ipsum_a_5\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/SeonRestService/aml-api/v1",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "SeonRestService",
+                            "aml-api",
+                            "v1"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"est_e0\": 28731900.975389868,\n  \"aliquip_44a\": -30397578.061820686,\n  \"ipsum_a_5\": false\n}",
+                      "createdAt": "2026-10-22T03:12:33.000Z",
+                      "updatedAt": "2026-10-22T03:12:33.000Z",
+                      "uid": "35240-6c576d03-76ab-4bca-8f9c-b7e7f1a23a66"
+                    },
+                    {
+                      "id": "e2295655-fe78-46c9-8729-48e55f6c928e",
+                      "name": "Error response",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "X-API-KEY",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"est_e0\": 28731900.975389868,\n  \"aliquip_44a\": -30397578.061820686,\n  \"ipsum_a_5\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/SeonRestService/aml-api/v1",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "SeonRestService",
+                            "aml-api",
+                            "v1"
+                          ]
+                        }
+                      },
+                      "status": "Internal Server Error",
+                      "code": 500,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"error\": \"<string>\",\n  \"message\": \"<string>\"\n}",
+                      "createdAt": "2026-10-22T03:12:33.000Z",
+                      "updatedAt": "2026-10-22T03:12:33.000Z",
+                      "uid": "35240-e2295655-fe78-46c9-8729-48e55f6c928e"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T03:12:33.000Z",
+                  "updatedAt": "2026-10-22T03:12:33.000Z",
+                  "uid": "35240-1446d4f7-e3d3-4457-ae0e-517cb669eb92"
                 }
               ],
-              "body": "{\n  \"key_0\": false,\n  \"key_1\": 6529\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            },
-            {
-              "id": "8e228505-0a6b-42f1-a972-75a89bbad23a",
-              "name": "Error response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "SeonRestService",
-                    "aml-api",
-                    "v1"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "X-API-KEY",
-                    "value": "<API Key>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"key_0\": false,\n  \"key_1\": 6529\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "Internal Server Error",
-              "code": 500,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "2dd519a0-380f-4219-a9c6-3bb0f0ececa9",
+              "createdAt": "2026-10-22T03:12:33.000Z",
+              "updatedAt": "2026-10-22T03:12:33.000Z",
+              "uid": "35240-2dd519a0-380f-4219-a9c6-3bb0f0ececa9"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "190483c1-a027-49da-b739-7d1b7381b32d",
+          "createdAt": "2026-10-22T03:12:33.000Z",
+          "updatedAt": "2026-10-22T03:12:33.000Z",
+          "uid": "35240-190483c1-a027-49da-b739-7d1b7381b32d"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "type": "string",
-      "value": "https://api.seon.io",
-      "key": "baseUrl"
+      "id": "c5dbdbbf-4dce-4d90-ad6f-450092788a0c",
+      "createdAt": "2026-10-22T03:12:33.000Z",
+      "updatedAt": "2026-10-22T03:12:33.000Z",
+      "uid": "35240-c5dbdbbf-4dce-4d90-ad6f-450092788a0c"
     }
   ],
   "auth": {
@@ -181,25 +206,25 @@
     "apikey": [
       {
         "key": "key",
-        "value": "X-API-KEY"
+        "value": "X-API-KEY",
+        "type": "string"
       },
       {
         "key": "value",
-        "value": "{{apiKey}}"
+        "value": "{{apiKey}}",
+        "type": "string"
       },
       {
         "key": "in",
-        "value": "header"
+        "value": "header",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "d8bba70a-beb3-4cc3-ace2-d35d879af804",
-    "name": "SEON AML API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "SEON is a fraud prevention and AML compliance platform offering a modular REST API architecture spanning the Fraud API and standalone Email, Phone, IP, BIN, and AML enrichment APIs.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.seon.io"
     }
-  }
+  ]
 }

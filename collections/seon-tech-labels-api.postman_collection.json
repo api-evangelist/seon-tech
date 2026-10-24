@@ -1,182 +1,216 @@
 {
+  "info": {
+    "_postman_id": "7605f080-5c16-4d34-a02b-5a6353231059",
+    "name": "SEON REST AML Labels API",
+    "description": "SEON's fraud prevention and anti-money-laundering REST API. Combines digital-footprint analysis, device fingerprinting, and machine-learning risk scoring to return real-time fraud scores and enriched intelligence from an email address, phone number, IP address, or full transaction payload, plus AML screening and transaction labeling. All requests authenticate with an X-API-KEY header and are case-sensitive.\n\nContact Support:\n Name: SEON Support\n Email: support@seon.io",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T03:13:15.000Z",
+    "updatedAt": "2026-10-22T03:13:15.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-7605f080-5c16-4d34-a02b-5a6353231059"
+  },
   "item": [
     {
-      "id": "e86b577b-c75f-4304-a8f3-dae7ce4c5d5b",
-      "name": "Labels",
-      "description": {
-        "content": "Transaction outcome labeling for machine-learning feedback.",
-        "type": "text/plain"
-      },
+      "name": "SeonRestService",
       "item": [
         {
-          "id": "d8cb15a9-3135-49a1-8bb8-aded411f226b",
-          "name": "Label scored transactions",
-          "request": {
-            "name": "Label scored transactions",
-            "description": {
-              "content": "Applies fraud-outcome labels (such as fraud_detection_fraud) to up to 50 previously scored transactions per request, feeding SEON's machine-learning models. A transaction can hold a single label at a time; existing labels can be overwritten.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "SeonRestService",
-                "fraud-api",
-                "transaction-label",
-                "v2"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "PUT",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"transactions\": [\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    },\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    }\n  ]\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
+          "name": "fraud-api",
+          "item": [
             {
-              "id": "fd282840-a7a6-4637-ad94-96778c4a78c1",
-              "name": "Labeling result.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "SeonRestService",
-                    "fraud-api",
-                    "transaction-label",
-                    "v2"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "X-API-KEY",
-                    "value": "<API Key>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "PUT",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"transactions\": [\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    },\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    }\n  ]\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "transaction-label",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "v2",
+                  "item": [
+                    {
+                      "name": "Label scored transactions",
+                      "id": "5478c7d8-115c-429a-b918-c247932b811f",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"transactions\": [\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    },\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    }\n  ]\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/SeonRestService/fraud-api/transaction-label/v2",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "SeonRestService",
+                            "fraud-api",
+                            "transaction-label",
+                            "v2"
+                          ]
+                        },
+                        "description": "Applies fraud-outcome labels (such as fraud_detection_fraud) to up to 50 previously scored transactions per request, feeding SEON's machine-learning models. A transaction can hold a single label at a time; existing labels can be overwritten."
+                      },
+                      "response": [
+                        {
+                          "id": "beb290fc-e041-49a5-ae8f-a70a2a4223fb",
+                          "name": "Labeling result.",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "X-API-KEY",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"transactions\": [\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    },\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    }\n  ]\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/SeonRestService/fraud-api/transaction-label/v2",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "SeonRestService",
+                                "fraud-api",
+                                "transaction-label",
+                                "v2"
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"success\": \"<boolean>\",\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\"\n  },\n  \"data\": {}\n}",
+                          "createdAt": "2026-10-22T03:13:16.000Z",
+                          "updatedAt": "2026-10-22T03:13:16.000Z",
+                          "uid": "35240-beb290fc-e041-49a5-ae8f-a70a2a4223fb"
+                        },
+                        {
+                          "id": "8e3e5750-b5b2-4be8-b574-89940395b22b",
+                          "name": "Authentication failed - missing or invalid X-API-KEY.",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "X-API-KEY",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"transactions\": [\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    },\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    }\n  ]\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/SeonRestService/fraud-api/transaction-label/v2",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "SeonRestService",
+                                "fraud-api",
+                                "transaction-label",
+                                "v2"
+                              ]
+                            }
+                          },
+                          "status": "Unauthorized",
+                          "code": 401,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"success\": \"<boolean>\",\n  \"error\": {\n    \"code\": \"<string>\",\n    \"message\": \"<string>\"\n  },\n  \"data\": {}\n}",
+                          "createdAt": "2026-10-22T03:13:16.000Z",
+                          "updatedAt": "2026-10-22T03:13:16.000Z",
+                          "uid": "35240-8e3e5750-b5b2-4be8-b574-89940395b22b"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T03:13:16.000Z",
+                      "updatedAt": "2026-10-22T03:13:16.000Z",
+                      "uid": "35240-5478c7d8-115c-429a-b918-c247932b811f"
+                    }
+                  ],
+                  "id": "403f8df3-29d6-4d83-99d7-9414f859c5e1",
+                  "createdAt": "2026-10-22T03:13:16.000Z",
+                  "updatedAt": "2026-10-22T03:13:16.000Z",
+                  "uid": "35240-403f8df3-29d6-4d83-99d7-9414f859c5e1"
                 }
               ],
-              "body": "{\n  \"success\": true,\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\"\n  },\n  \"data\": {}\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            },
-            {
-              "id": "ae65f97d-e7c8-4edf-8bcd-76e9ecedcdf5",
-              "name": "Authentication failed - missing or invalid X-API-KEY.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "SeonRestService",
-                    "fraud-api",
-                    "transaction-label",
-                    "v2"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "X-API-KEY",
-                    "value": "<API Key>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "PUT",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"transactions\": [\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    },\n    {\n      \"transaction_id\": \"<string>\",\n      \"label\": \"<string>\"\n    }\n  ]\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "Unauthorized",
-              "code": 401,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"success\": true,\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\"\n  },\n  \"data\": {}\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "f5066e51-5d67-4364-85fc-c31f7000154f",
+              "createdAt": "2026-10-22T03:13:16.000Z",
+              "updatedAt": "2026-10-22T03:13:16.000Z",
+              "uid": "35240-f5066e51-5d67-4364-85fc-c31f7000154f"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "c16292d4-abec-41f6-97cc-a513682d815c",
+          "createdAt": "2026-10-22T03:13:16.000Z",
+          "updatedAt": "2026-10-22T03:13:16.000Z",
+          "uid": "35240-c16292d4-abec-41f6-97cc-a513682d815c"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "type": "string",
-      "value": "https://api.seon.io",
-      "key": "baseUrl"
+      "id": "70049a87-2025-499b-b9e3-4f039f3db705",
+      "createdAt": "2026-10-22T03:13:16.000Z",
+      "updatedAt": "2026-10-22T03:13:16.000Z",
+      "uid": "35240-70049a87-2025-499b-b9e3-4f039f3db705"
     }
   ],
   "auth": {
@@ -184,25 +218,25 @@
     "apikey": [
       {
         "key": "key",
-        "value": "X-API-KEY"
+        "value": "X-API-KEY",
+        "type": "string"
       },
       {
         "key": "value",
-        "value": "{{apiKey}}"
+        "value": "{{apiKey}}",
+        "type": "string"
       },
       {
         "key": "in",
-        "value": "header"
+        "value": "header",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "d2f1ad76-5c1c-4a19-8eaa-73059308c701",
-    "name": "SEON REST AML Labels API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "SEON's fraud prevention and anti-money-laundering REST API. Combines digital-footprint analysis, device fingerprinting, and machine-learning risk scoring to return real-time fraud scores and enriched intelligence from an email address, phone number, IP address, or full transaction payload, plus AML screening and transaction labeling. All requests authenticate with an X-API-KEY header and are case-sensitive.\n\nContact Support:\n Name: SEON Support\n Email: support@seon.io",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.seon.io"
     }
-  }
+  ]
 }

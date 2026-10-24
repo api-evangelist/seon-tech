@@ -1,208 +1,228 @@
 {
+  "info": {
+    "_postman_id": "b7c1b5a7-868a-4a40-8fcd-b8c311f8a038",
+    "name": "SEON IP API",
+    "description": "SEON is a fraud prevention and AML compliance platform offering a modular REST API architecture spanning the Fraud API and standalone Email, Phone, IP, BIN, and AML enrichment APIs.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T03:13:03.000Z",
+    "updatedAt": "2026-10-22T03:13:03.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-b7c1b5a7-868a-4a40-8fcd-b8c311f8a038"
+  },
   "item": [
     {
-      "id": "c3b75507-4274-4b8d-be36-d2173241916d",
-      "name": "IP",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "SeonRestService",
       "item": [
         {
-          "id": "bb2cd09f-cfaf-4b07-a988-2ec8827a184f",
-          "name": "Lookup IP address intelligence",
-          "request": {
-            "name": "Lookup IP address intelligence",
-            "description": {
-              "content": "Returns IP intelligence including history, flags, and identifiers.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "SeonRestService",
-                "ip-api",
-                "v1",
-                ":ip"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [
-                {
-                  "disabled": false,
-                  "key": "include",
-                  "value": "<string>",
-                  "description": "Comma-separated list of additional fields (history, flags, id)."
-                },
-                {
-                  "disabled": false,
-                  "key": "flags_timeframe_days",
-                  "value": "<integer>",
-                  "description": "Timeframe in days used when evaluating flags."
-                }
-              ],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "ip",
-                  "description": "(Required) IPv4 or IPv6 address to evaluate."
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
+          "name": "ip-api",
+          "item": [
             {
-              "id": "d3d1e8ef-52e8-4bb4-b3f3-78e10a05567c",
-              "name": "IP intelligence result",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "SeonRestService",
-                    "ip-api",
-                    "v1",
-                    ":ip"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "include",
-                      "value": "<string>"
-                    },
-                    {
-                      "key": "flags_timeframe_days",
-                      "value": "<integer>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "ip",
-                      "description": "(Required) IPv4 or IPv6 address to evaluate."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "X-API-KEY",
-                    "value": "<API Key>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "v1",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "{ip}",
+                  "item": [
+                    {
+                      "name": "Lookup IP address intelligence",
+                      "id": "94422ab8-3d86-4557-a5d9-37fa8e373c63",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/SeonRestService/ip-api/v1/:ip?include=<string>&flags_timeframe_days=<integer>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "SeonRestService",
+                            "ip-api",
+                            "v1",
+                            ":ip"
+                          ],
+                          "query": [
+                            {
+                              "description": "Comma-separated list of additional fields (history, flags, id).",
+                              "key": "include",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "Timeframe in days used when evaluating flags.",
+                              "key": "flags_timeframe_days",
+                              "value": "<integer>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "id": "f42fd122-9c4c-4f00-a716-d58ab7ac168a",
+                              "key": "ip",
+                              "value": "<string>",
+                              "description": "(Required) IPv4 or IPv6 address to evaluate."
+                            }
+                          ]
+                        },
+                        "description": "Returns IP intelligence including history, flags, and identifiers."
+                      },
+                      "response": [
+                        {
+                          "id": "5cb28129-fbc1-4514-b3ab-fb91da199674",
+                          "name": "IP intelligence result",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "X-API-KEY",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/SeonRestService/ip-api/v1/:ip?include=<string>&flags_timeframe_days=<integer>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "SeonRestService",
+                                "ip-api",
+                                "v1",
+                                ":ip"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Comma-separated list of additional fields (history, flags, id).",
+                                  "key": "include",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "description": "Timeframe in days used when evaluating flags.",
+                                  "key": "flags_timeframe_days",
+                                  "value": "<integer>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "ip"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"voluptate_c0e\": \"culpa m\",\n  \"occaecatbb8\": -82535655.92890255\n}",
+                          "createdAt": "2026-10-22T03:13:03.000Z",
+                          "updatedAt": "2026-10-22T03:13:03.000Z",
+                          "uid": "35240-5cb28129-fbc1-4514-b3ab-fb91da199674"
+                        },
+                        {
+                          "id": "caacd019-063b-4435-bec3-4000a9f04ef8",
+                          "name": "Error response",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "X-API-KEY",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/SeonRestService/ip-api/v1/:ip?include=<string>&flags_timeframe_days=<integer>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "SeonRestService",
+                                "ip-api",
+                                "v1",
+                                ":ip"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Comma-separated list of additional fields (history, flags, id).",
+                                  "key": "include",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "description": "Timeframe in days used when evaluating flags.",
+                                  "key": "flags_timeframe_days",
+                                  "value": "<integer>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "ip"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Internal Server Error",
+                          "code": 500,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"error\": \"<string>\",\n  \"message\": \"<string>\",\n  \"anim_2_6\": -3325223,\n  \"velit13\": \"proident quis nisi ex ad\",\n  \"do5\": -89651866\n}",
+                          "createdAt": "2026-10-22T03:13:03.000Z",
+                          "updatedAt": "2026-10-22T03:13:03.000Z",
+                          "uid": "35240-caacd019-063b-4435-bec3-4000a9f04ef8"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T03:13:03.000Z",
+                      "updatedAt": "2026-10-22T03:13:03.000Z",
+                      "uid": "35240-94422ab8-3d86-4557-a5d9-37fa8e373c63"
+                    }
+                  ],
+                  "id": "7f12db24-27ae-4671-bd09-e4977029bd60",
+                  "createdAt": "2026-10-22T03:13:03.000Z",
+                  "updatedAt": "2026-10-22T03:13:03.000Z",
+                  "uid": "35240-7f12db24-27ae-4671-bd09-e4977029bd60"
                 }
               ],
-              "body": "{\n  \"key_0\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            },
-            {
-              "id": "69dfa3f5-0ffa-4a52-be35-376b05651780",
-              "name": "Error response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "SeonRestService",
-                    "ip-api",
-                    "v1",
-                    ":ip"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "include",
-                      "value": "<string>"
-                    },
-                    {
-                      "key": "flags_timeframe_days",
-                      "value": "<integer>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "ip",
-                      "description": "(Required) IPv4 or IPv6 address to evaluate."
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "X-API-KEY",
-                    "value": "<API Key>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "Internal Server Error",
-              "code": 500,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "a2ee2ce8-c24a-477c-ba49-6f90f6a875f3",
+              "createdAt": "2026-10-22T03:13:03.000Z",
+              "updatedAt": "2026-10-22T03:13:03.000Z",
+              "uid": "35240-a2ee2ce8-c24a-477c-ba49-6f90f6a875f3"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "c90fdb6a-bfeb-4bf2-99b6-244f1b9dd836",
+          "createdAt": "2026-10-22T03:13:03.000Z",
+          "updatedAt": "2026-10-22T03:13:03.000Z",
+          "uid": "35240-c90fdb6a-bfeb-4bf2-99b6-244f1b9dd836"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "type": "string",
-      "value": "https://api.seon.io",
-      "key": "baseUrl"
+      "id": "50a5025d-4554-4a18-9dd0-ce070b08c44e",
+      "createdAt": "2026-10-22T03:13:03.000Z",
+      "updatedAt": "2026-10-22T03:13:03.000Z",
+      "uid": "35240-50a5025d-4554-4a18-9dd0-ce070b08c44e"
     }
   ],
   "auth": {
@@ -210,25 +230,25 @@
     "apikey": [
       {
         "key": "key",
-        "value": "X-API-KEY"
+        "value": "X-API-KEY",
+        "type": "string"
       },
       {
         "key": "value",
-        "value": "{{apiKey}}"
+        "value": "{{apiKey}}",
+        "type": "string"
       },
       {
         "key": "in",
-        "value": "header"
+        "value": "header",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "b2631244-740a-4900-b049-03b04ce541e6",
-    "name": "SEON AML IP API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "SEON is a fraud prevention and AML compliance platform offering a modular REST API architecture spanning the Fraud API and standalone Email, Phone, IP, BIN, and AML enrichment APIs.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.seon.io"
     }
-  }
+  ]
 }

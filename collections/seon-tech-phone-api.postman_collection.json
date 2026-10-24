@@ -1,179 +1,204 @@
 {
+  "info": {
+    "_postman_id": "1d836cea-e980-4487-aa98-0ae6547511dd",
+    "name": "SEON Phone API",
+    "description": "SEON is a fraud prevention and AML compliance platform offering a modular REST API architecture spanning the Fraud API and standalone Email, Phone, IP, BIN, and AML enrichment APIs.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T03:13:11.000Z",
+    "updatedAt": "2026-10-22T03:13:11.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-1d836cea-e980-4487-aa98-0ae6547511dd"
+  },
   "item": [
     {
-      "id": "4ddc1599-eac9-4545-b613-5aca4904e02d",
-      "name": "Phone",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "SeonRestService",
       "item": [
         {
-          "id": "0bd8063d-4ffe-4ee3-8816-36d7eabf5fdb",
-          "name": "Enrich a phone number",
-          "request": {
-            "name": "Enrich a phone number",
-            "description": {
-              "content": "Returns risk scores, account aggregates, fraud history, carrier details, and other phone intelligence data.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "SeonRestService",
-                "phone-api",
-                "v2"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"key_0\": 8778,\n  \"key_1\": 9468\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
+          "name": "phone-api",
+          "item": [
             {
-              "id": "b1645f5b-182a-433b-8c79-8fe1f7be1371",
-              "name": "Phone enrichment result",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "SeonRestService",
-                    "phone-api",
-                    "v2"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "X-API-KEY",
-                    "value": "<API Key>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"key_0\": 9652.491326519126,\n  \"key_1\": 7411,\n  \"key_2\": 5070.1760636469735\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "v2",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "Enrich a phone number",
+                  "id": "7adfd679-9836-4600-a9eb-5b4d49f81260",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"adipisicing23\": -32146859,\n  \"dolor_be\": true,\n  \"dolor_ee\": false\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/SeonRestService/phone-api/v2",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "SeonRestService",
+                        "phone-api",
+                        "v2"
+                      ]
+                    },
+                    "description": "Returns risk scores, account aggregates, fraud history, carrier details, and other phone intelligence data."
+                  },
+                  "response": [
+                    {
+                      "id": "20cafadb-6029-46a4-a26f-d0f0eba3ae7e",
+                      "name": "Phone enrichment result",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "X-API-KEY",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"adipisicing23\": -32146859,\n  \"dolor_be\": true,\n  \"dolor_ee\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/SeonRestService/phone-api/v2",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "SeonRestService",
+                            "phone-api",
+                            "v2"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"adipisicing23\": -32146859,\n  \"dolor_be\": true,\n  \"dolor_ee\": false\n}",
+                      "createdAt": "2026-10-22T03:13:12.000Z",
+                      "updatedAt": "2026-10-22T03:13:12.000Z",
+                      "uid": "35240-20cafadb-6029-46a4-a26f-d0f0eba3ae7e"
+                    },
+                    {
+                      "id": "62a8ce9d-276a-4335-952b-a109bb505c1d",
+                      "name": "Error response",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "X-API-KEY",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"adipisicing23\": -32146859,\n  \"dolor_be\": true,\n  \"dolor_ee\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/SeonRestService/phone-api/v2",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "SeonRestService",
+                            "phone-api",
+                            "v2"
+                          ]
+                        }
+                      },
+                      "status": "Internal Server Error",
+                      "code": 500,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"error\": \"<string>\",\n  \"message\": \"<string>\"\n}",
+                      "createdAt": "2026-10-22T03:13:12.000Z",
+                      "updatedAt": "2026-10-22T03:13:12.000Z",
+                      "uid": "35240-62a8ce9d-276a-4335-952b-a109bb505c1d"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T03:13:12.000Z",
+                  "updatedAt": "2026-10-22T03:13:12.000Z",
+                  "uid": "35240-7adfd679-9836-4600-a9eb-5b4d49f81260"
                 }
               ],
-              "body": "{\n  \"key_0\": 9652.491326519126,\n  \"key_1\": 7411,\n  \"key_2\": 5070.1760636469735\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            },
-            {
-              "id": "3a7f387d-8923-4531-a3b4-5ea3634a6eb5",
-              "name": "Error response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "SeonRestService",
-                    "phone-api",
-                    "v2"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "X-API-KEY",
-                    "value": "<API Key>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"key_0\": 9652.491326519126,\n  \"key_1\": 7411,\n  \"key_2\": 5070.1760636469735\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "Internal Server Error",
-              "code": 500,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "96d21237-1969-4194-a6cc-51ee970d8a99",
+              "createdAt": "2026-10-22T03:13:12.000Z",
+              "updatedAt": "2026-10-22T03:13:12.000Z",
+              "uid": "35240-96d21237-1969-4194-a6cc-51ee970d8a99"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "2ae68537-c93c-43e8-af04-874a8d3f4180",
+          "createdAt": "2026-10-22T03:13:12.000Z",
+          "updatedAt": "2026-10-22T03:13:12.000Z",
+          "uid": "35240-2ae68537-c93c-43e8-af04-874a8d3f4180"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "type": "string",
-      "value": "https://api.seon.io",
-      "key": "baseUrl"
+      "id": "34525200-57b0-4099-a8f4-ab81d9a60fee",
+      "createdAt": "2026-10-22T03:13:12.000Z",
+      "updatedAt": "2026-10-22T03:13:12.000Z",
+      "uid": "35240-34525200-57b0-4099-a8f4-ab81d9a60fee"
     }
   ],
   "auth": {
@@ -181,25 +206,25 @@
     "apikey": [
       {
         "key": "key",
-        "value": "X-API-KEY"
+        "value": "X-API-KEY",
+        "type": "string"
       },
       {
         "key": "value",
-        "value": "{{apiKey}}"
+        "value": "{{apiKey}}",
+        "type": "string"
       },
       {
         "key": "in",
-        "value": "header"
+        "value": "header",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "84eb992f-ddc1-41d7-965e-3b4b4907c0d9",
-    "name": "SEON AML Phone API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "SEON is a fraud prevention and AML compliance platform offering a modular REST API architecture spanning the Fraud API and standalone Email, Phone, IP, BIN, and AML enrichment APIs.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.seon.io"
     }
-  }
+  ]
 }

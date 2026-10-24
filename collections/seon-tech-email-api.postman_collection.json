@@ -1,179 +1,204 @@
 {
+  "info": {
+    "_postman_id": "b9c2b72e-ead0-4206-9096-37247ee33a43",
+    "name": "SEON Email API",
+    "description": "SEON is a fraud prevention and AML compliance platform offering a modular REST API architecture spanning the Fraud API and standalone Email, Phone, IP, BIN, and AML enrichment APIs.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T03:12:50.000Z",
+    "updatedAt": "2026-10-22T03:12:50.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-b9c2b72e-ead0-4206-9096-37247ee33a43"
+  },
   "item": [
     {
-      "id": "f5dea564-505a-415e-a2d0-155cd2b2d17c",
-      "name": "Email",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "SeonRestService",
       "item": [
         {
-          "id": "2484bb0b-5608-4f0b-accd-c12cd60d15b9",
-          "name": "Enrich an email address",
-          "request": {
-            "name": "Enrich an email address",
-            "description": {
-              "content": "Returns insights into the digital footprint associated with an email address.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "SeonRestService",
-                "email-api",
-                "v3"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"key_0\": 6392,\n  \"key_1\": \"string\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
+          "name": "email-api",
+          "item": [
             {
-              "id": "e5b3b348-8367-4a8f-9824-cb500e34241e",
-              "name": "Email enrichment result",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "SeonRestService",
-                    "email-api",
-                    "v3"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "X-API-KEY",
-                    "value": "<API Key>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"key_0\": \"string\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "v3",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "Enrich an email address",
+                  "id": "fae2e3bc-b21c-4222-baa2-226fa69cb00e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"doe4d\": 82236977.65394416\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/SeonRestService/email-api/v3",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "SeonRestService",
+                        "email-api",
+                        "v3"
+                      ]
+                    },
+                    "description": "Returns insights into the digital footprint associated with an email address."
+                  },
+                  "response": [
+                    {
+                      "id": "1a135216-84db-4b80-b931-7ea1b96e0170",
+                      "name": "Email enrichment result",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "X-API-KEY",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"doe4d\": 82236977.65394416\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/SeonRestService/email-api/v3",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "SeonRestService",
+                            "email-api",
+                            "v3"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"doe4d\": 82236977.65394416\n}",
+                      "createdAt": "2026-10-22T03:12:51.000Z",
+                      "updatedAt": "2026-10-22T03:12:51.000Z",
+                      "uid": "35240-1a135216-84db-4b80-b931-7ea1b96e0170"
+                    },
+                    {
+                      "id": "2e68160e-dfab-48b5-9951-4c112eef6f80",
+                      "name": "Error response",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "X-API-KEY",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"doe4d\": 82236977.65394416\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/SeonRestService/email-api/v3",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "SeonRestService",
+                            "email-api",
+                            "v3"
+                          ]
+                        }
+                      },
+                      "status": "Internal Server Error",
+                      "code": 500,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"error\": \"<string>\",\n  \"message\": \"<string>\",\n  \"ex0\": -20440856.571247682\n}",
+                      "createdAt": "2026-10-22T03:12:51.000Z",
+                      "updatedAt": "2026-10-22T03:12:51.000Z",
+                      "uid": "35240-2e68160e-dfab-48b5-9951-4c112eef6f80"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T03:12:51.000Z",
+                  "updatedAt": "2026-10-22T03:12:51.000Z",
+                  "uid": "35240-fae2e3bc-b21c-4222-baa2-226fa69cb00e"
                 }
               ],
-              "body": "{\n  \"key_0\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            },
-            {
-              "id": "acd75b69-aee7-467b-91e9-6f81e82c8a96",
-              "name": "Error response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "SeonRestService",
-                    "email-api",
-                    "v3"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "X-API-KEY",
-                    "value": "<API Key>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"key_0\": \"string\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "Internal Server Error",
-              "code": 500,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\",\n  \"key_0\": 9105.699202081407\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "ffd76984-da6d-44f8-a43c-6a417282b60b",
+              "createdAt": "2026-10-22T03:12:51.000Z",
+              "updatedAt": "2026-10-22T03:12:51.000Z",
+              "uid": "35240-ffd76984-da6d-44f8-a43c-6a417282b60b"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "e18083de-8a59-481d-bc31-55422381b8e9",
+          "createdAt": "2026-10-22T03:12:51.000Z",
+          "updatedAt": "2026-10-22T03:12:51.000Z",
+          "uid": "35240-e18083de-8a59-481d-bc31-55422381b8e9"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "type": "string",
-      "value": "https://api.seon.io",
-      "key": "baseUrl"
+      "id": "0691db1f-8d96-4a27-8b88-fcdda2aa2684",
+      "createdAt": "2026-10-22T03:12:51.000Z",
+      "updatedAt": "2026-10-22T03:12:51.000Z",
+      "uid": "35240-0691db1f-8d96-4a27-8b88-fcdda2aa2684"
     }
   ],
   "auth": {
@@ -181,25 +206,25 @@
     "apikey": [
       {
         "key": "key",
-        "value": "X-API-KEY"
+        "value": "X-API-KEY",
+        "type": "string"
       },
       {
         "key": "value",
-        "value": "{{apiKey}}"
+        "value": "{{apiKey}}",
+        "type": "string"
       },
       {
         "key": "in",
-        "value": "header"
+        "value": "header",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "e18acae3-7856-4619-89b5-6539fbffc2bf",
-    "name": "SEON AML Email API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "SEON is a fraud prevention and AML compliance platform offering a modular REST API architecture spanning the Fraud API and standalone Email, Phone, IP, BIN, and AML enrichment APIs.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.seon.io"
     }
-  }
+  ]
 }

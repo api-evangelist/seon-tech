@@ -1,182 +1,207 @@
 {
+  "info": {
+    "_postman_id": "80caf1e4-4bef-4a6c-bba1-96cfd709e394",
+    "name": "SEON Fraud API",
+    "description": "SEON is a fraud prevention and AML compliance platform offering a modular REST API architecture spanning the Fraud API and standalone Email, Phone, IP, BIN, and AML enrichment APIs.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T03:12:56.000Z",
+    "updatedAt": "2026-10-22T03:12:57.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-80caf1e4-4bef-4a6c-bba1-96cfd709e394"
+  },
   "item": [
     {
-      "id": "07a64172-bebd-454b-871f-0be90a36c912",
-      "name": "Fraud",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "SeonRestService",
       "item": [
         {
-          "id": "64c6ab39-08ab-4821-98c6-4d4c317ce61a",
-          "name": "Submit a fraud evaluation request",
-          "request": {
-            "name": "Submit a fraud evaluation request",
-            "description": {
-              "content": "Combines email, phone, IP, BIN, and AML signals with device fingerprinting to return enriched data, rules, and risk scoring in a single call.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "SeonRestService",
-                "fraud-api",
-                "v2",
-                ""
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"key_0\": 9027.101280219225,\n  \"key_1\": \"string\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
+          "name": "fraud-api",
+          "item": [
             {
-              "id": "2f562347-3896-47ba-89a5-c1734cb04375",
-              "name": "Fraud evaluation result",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "SeonRestService",
-                    "fraud-api",
-                    "v2",
-                    ""
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "X-API-KEY",
-                    "value": "<API Key>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"key_0\": \"string\",\n  \"key_1\": 422\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "v2",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "Submit a fraud evaluation request",
+                  "id": "041092cd-3fa4-438b-a336-d131d26d5007",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"dolore03\": -66003853.25011122,\n  \"nulla03\": -99124694.76739143,\n  \"proident21\": false\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/SeonRestService/fraud-api/v2/",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "SeonRestService",
+                        "fraud-api",
+                        "v2",
+                        ""
+                      ]
+                    },
+                    "description": "Combines email, phone, IP, BIN, and AML signals with device fingerprinting to return enriched data, rules, and risk scoring in a single call."
+                  },
+                  "response": [
+                    {
+                      "id": "dd272cf2-7f12-41f5-87e1-cb51ab298071",
+                      "name": "Fraud evaluation result",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "X-API-KEY",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"dolore03\": -66003853.25011122,\n  \"nulla03\": -99124694.76739143,\n  \"proident21\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/SeonRestService/fraud-api/v2/",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "SeonRestService",
+                            "fraud-api",
+                            "v2",
+                            ""
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"dolore03\": -66003853.25011122,\n  \"nulla03\": -99124694.76739143,\n  \"proident21\": false\n}",
+                      "createdAt": "2026-10-22T03:12:57.000Z",
+                      "updatedAt": "2026-10-22T03:12:57.000Z",
+                      "uid": "35240-dd272cf2-7f12-41f5-87e1-cb51ab298071"
+                    },
+                    {
+                      "id": "6b48820d-de21-42bc-bb02-467aedc6a065",
+                      "name": "Error response",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "X-API-KEY",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"dolore03\": -66003853.25011122,\n  \"nulla03\": -99124694.76739143,\n  \"proident21\": false\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/SeonRestService/fraud-api/v2/",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "SeonRestService",
+                            "fraud-api",
+                            "v2",
+                            ""
+                          ]
+                        }
+                      },
+                      "status": "Internal Server Error",
+                      "code": 500,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"error\": \"<string>\",\n  \"message\": \"<string>\",\n  \"nulla94\": -8070339.9875305,\n  \"in_f\": true,\n  \"sunte\": \"deserunt voluptate minim\"\n}",
+                      "createdAt": "2026-10-22T03:12:57.000Z",
+                      "updatedAt": "2026-10-22T03:12:57.000Z",
+                      "uid": "35240-6b48820d-de21-42bc-bb02-467aedc6a065"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T03:12:57.000Z",
+                  "updatedAt": "2026-10-22T03:12:57.000Z",
+                  "uid": "35240-041092cd-3fa4-438b-a336-d131d26d5007"
                 }
               ],
-              "body": "{\n  \"key_0\": \"string\",\n  \"key_1\": 422\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            },
-            {
-              "id": "36dd5d9b-fea0-4414-862b-b767b99356ce",
-              "name": "Error response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "SeonRestService",
-                    "fraud-api",
-                    "v2",
-                    ""
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: apikey",
-                      "type": "text/plain"
-                    },
-                    "key": "X-API-KEY",
-                    "value": "<API Key>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"key_0\": \"string\",\n  \"key_1\": 422\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "Internal Server Error",
-              "code": 500,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"error\": \"string\",\n  \"message\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "f507963b-e226-4354-a80a-0c5113ca710e",
+              "createdAt": "2026-10-22T03:12:57.000Z",
+              "updatedAt": "2026-10-22T03:12:57.000Z",
+              "uid": "35240-f507963b-e226-4354-a80a-0c5113ca710e"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "9bcacd16-903d-4443-a992-2db1dbdd177a",
+          "createdAt": "2026-10-22T03:12:57.000Z",
+          "updatedAt": "2026-10-22T03:12:57.000Z",
+          "uid": "35240-9bcacd16-903d-4443-a992-2db1dbdd177a"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "type": "string",
-      "value": "https://api.seon.io",
-      "key": "baseUrl"
+      "id": "32171266-b5f3-45ce-bc0b-e7f49af69c53",
+      "createdAt": "2026-10-22T03:12:57.000Z",
+      "updatedAt": "2026-10-22T03:12:57.000Z",
+      "uid": "35240-32171266-b5f3-45ce-bc0b-e7f49af69c53"
     }
   ],
   "auth": {
@@ -184,25 +209,25 @@
     "apikey": [
       {
         "key": "key",
-        "value": "X-API-KEY"
+        "value": "X-API-KEY",
+        "type": "string"
       },
       {
         "key": "value",
-        "value": "{{apiKey}}"
+        "value": "{{apiKey}}",
+        "type": "string"
       },
       {
         "key": "in",
-        "value": "header"
+        "value": "header",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "22a4888e-e77f-465e-92c9-e5a61599b4d9",
-    "name": "SEON AML Fraud API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "SEON is a fraud prevention and AML compliance platform offering a modular REST API architecture spanning the Fraud API and standalone Email, Phone, IP, BIN, and AML enrichment APIs.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.seon.io"
     }
-  }
+  ]
 }
