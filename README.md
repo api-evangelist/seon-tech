@@ -1,4 +1,4 @@
-# SEON (seon-tech)
+# SEON
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,268 +66,147 @@
 
 SEON is a Budapest-headquartered fraud prevention, AML compliance, and digital footprint analysis platform that exposes a modular REST API for fraud scoring, identity verification, email enrichment, phone enrichment, IP intelligence, BIN lookup, AML screening, device intelligence, and identity verification (IDV). SEON combines real-time enrichment of email, phone, IP, BIN, and device signals with customer-defined rules and machine learning to score risk and prevent fraud, account takeover, multi-accounting, and money laundering across digital channels.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/seon-tech/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/seon-tech/refs/heads/main/apis.yml)
+**Areas:** AML Compliance · Device Intelligence · Digital Footprint · Fraud Prevention · Identity Verification · Risk Scoring
 
-## Scope
+## SEON on APIs.io
 
-- **Type:** Index
+Everything profiled for SEON is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/seon-tech/](https://apis.io/providers/seon-tech/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (11)
 
-- AML Compliance
-- Device Intelligence
-- Digital Footprint
-- Fraud Prevention
-- Identity Verification
-- Risk Scoring
+- [SEON Device Intelligence](https://apis.io/apis/seon-tech/device-intelligence/) — SEON Device Intelligence is the device-fingerprinting product surfaced through JavaScript, iOS, Android, Flutter, React Native, Cordova, and Unity SDKs.…
+- [SEON Identity Verification](https://apis.io/apis/seon-tech/idv/) — SEON Identity Verification (IDV) is an AI-powered identity verification product combining document checks, biometric liveness, and enriched fraud signals.…
+- [SEON Orchestration](https://apis.io/apis/seon-tech/orchestration/) — SEON Orchestration lets customers compose multi-step fraud, KYC, and risk workflows that combine SEON enrichment with third-party providers. Integration is…
+- [SEON User Session Monitoring](https://apis.io/apis/seon-tech/user-session-monitoring/) — User Session Monitoring streams in-session behavioral, device, and risk signals for continuous account-takeover and session-hijacking detection across web,…
+- [SEON AML API](https://apis.io/apis/seon-tech/seon-tech-aml-api/) — The AML API from SEON — 1 operation(s) for aml.
+- [SEON BIN API](https://apis.io/apis/seon-tech/seon-tech-bin-api/) — The BIN API from SEON — 1 operation(s) for bin.
+- [SEON Email API](https://apis.io/apis/seon-tech/seon-tech-email-api/) — The Email API from SEON — 1 operation(s) for email.
+- [SEON Fraud API](https://apis.io/apis/seon-tech/seon-tech-fraud-api/) — The Fraud API from SEON — 1 operation(s) for fraud.
+- [SEON IP API](https://apis.io/apis/seon-tech/seon-tech-ip-api/) — The IP API from SEON — 1 operation(s) for ip.
+- [SEON Phone API](https://apis.io/apis/seon-tech/seon-tech-phone-api/) — The Phone API from SEON — 1 operation(s) for phone.
+- [SEON Labels API](https://apis.io/apis/seon-tech/seon-tech-labels-api/) — Transaction outcome labeling for machine-learning feedback.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-25
-- **Modified:** 2026-05-25
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (1)
 
-### SEON Fraud API
+Model Context Protocol servers that expose the API to agents.
 
-The SEON Fraud API is a modular API that combines email, phone number, IP, BIN, and AML APIs with device fingerprinting so customers can request and receive enriched data, applied rules, and risk scoring in a single API call to detect and prevent fraud.
+- [seon-tech](https://apis.io/servers/seon-tech/seon-tech/)
 
-- **Human URL:** [https://docs.seon.io/api-reference/fraud-api](https://docs.seon.io/api-reference/fraud-api)
-- **Base URL:** `https://api.seon.io/SeonRestService/fraud-api/v2/`
+#### Agentic access (1)
 
-#### Tags
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- Fraud Detection
-- Identity
-- Risk Scoring
+- [Seon Tech Agentic Access](https://apis.io/agentic-access/seon-tech/seon-tech-agentic-access/)
 
-#### Properties
+#### Collections (9)
 
-- [Documentation](https://docs.seon.io/api-reference/fraud-api)
-- [Getting Started](https://docs.seon.io/getting-started)
-- [Authentication](https://docs.seon.io/api-reference/introduction)
-- [OpenAPI](openapi/seon-tech-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/seon-tech.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/seon-tech.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Plans](plans/seon-tech-plans-pricing.yml)
-- [Rate Limits](rate-limits/seon-tech-rate-limits.yml)
-- [Fin Ops](finops/seon-tech-finops.yml)
+Postman and Open Collection request collections.
 
-### SEON Email API
+- [SEON REST API](https://apis.io/collections/seon-tech/open-seon/)
+- [SEON API](https://apis.io/collections/seon-tech/open-seon-tech/)
+- [SEON AML API](https://apis.io/collections/seon-tech/open-seon-tech-aml-api/)
+- [SEON AML BIN API](https://apis.io/collections/seon-tech/open-seon-tech-bin-api/)
+- [SEON AML Email API](https://apis.io/collections/seon-tech/open-seon-tech-email-api/)
+- [SEON AML Fraud API](https://apis.io/collections/seon-tech/open-seon-tech-fraud-api/)
+- [SEON AML IP API](https://apis.io/collections/seon-tech/open-seon-tech-ip-api/)
+- [SEON REST AML Labels API](https://apis.io/collections/seon-tech/open-seon-tech-labels-api/)
+- [SEON AML Phone API](https://apis.io/collections/seon-tech/open-seon-tech-phone-api/)
 
-The SEON Email API is a standalone email enrichment endpoint that returns digital footprint data tied to an email address, including approximate minimum account age, registration status across dozens of social and online services, domain details, and disposable / free provider flags.
+#### Security (3)
 
-- **Human URL:** [https://docs.seon.io/api-reference/email-api](https://docs.seon.io/api-reference/email-api)
-- **Base URL:** `https://api.seon.io/SeonRestService/email-api/v3`
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags
+- [Seon Tech Authentication](https://apis.io/security/seon-tech/seon-tech-authentication/)
+- [Seon Tech Domain Security](https://apis.io/security/seon-tech/seon-tech-domain-security/)
+- [Seon Tech Trust Center](https://apis.io/security/seon-tech/seon-tech-trust-center/)
 
-- Email
-- Enrichment
-- Fraud Prevention
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Documentation](https://docs.seon.io/api-reference/email-api)
-- [OpenAPI](openapi/seon-tech-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/seon-tech.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/seon-tech.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Seon Tech Plans Pricing](https://apis.io/plans/seon-tech/seon-tech-plans-pricing/)
 
-### SEON Phone API
+#### Rate limits (1)
 
-The SEON Phone API returns phone-number intelligence including carrier and line-type detail, account presence across major social and messaging services (WhatsApp, Telegram, Viber, social networks), and risk signals tied to the number.
+Published request limits.
 
-- **Human URL:** [https://docs.seon.io/api-reference/phone-api](https://docs.seon.io/api-reference/phone-api)
-- **Base URL:** `https://api.seon.io/SeonRestService/phone-api/v2`
+- [Seon Tech Rate Limits](https://apis.io/rate-limits/seon-tech/seon-tech-rate-limits/)
 
-#### Tags
+#### FinOps (1)
 
-- Enrichment
-- Fraud Prevention
-- Phone
+What the API costs to run, by operation.
 
-#### Properties
+- [Seon Tech Finops](https://apis.io/finops/seon-tech/seon-tech-finops/)
 
-- [Documentation](https://docs.seon.io/api-reference/phone-api)
-- [OpenAPI](openapi/seon-tech-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/seon-tech.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/seon-tech.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+## Where to find this API
 
-### SEON IP API
-
-The SEON IP API returns IP intelligence including geolocation, ISP, proxy/VPN/Tor detection, residential-proxy detection, datacenter classification, and a history of risk flags observed against the IP address.
-
-- **Human URL:** [https://docs.seon.io/api-reference/ip-api](https://docs.seon.io/api-reference/ip-api)
-- **Base URL:** `https://api.seon.io/SeonRestService/ip-api/v1`
-
-#### Tags
-
-- Enrichment
-- Fraud Prevention
-- IP Intelligence
-
-#### Properties
-
-- [Documentation](https://docs.seon.io/api-reference/ip-api)
-- [OpenAPI](openapi/seon-tech-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/seon-tech.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/seon-tech.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### SEON BIN API
-
-The SEON BIN API returns information about a payment card given its Bank Identification Number, including issuing bank, country, card brand, card type, and validity, supporting card-not-present fraud decisions.
-
-- **Human URL:** [https://docs.seon.io/api-reference/bin-api](https://docs.seon.io/api-reference/bin-api)
-- **Base URL:** `https://api.seon.io/SeonRestService/bin-api/v1`
-
-#### Tags
-
-- BIN
-- Enrichment
-- Payments
-
-#### Properties
-
-- [Documentation](https://docs.seon.io/api-reference/bin-api)
-- [OpenAPI](openapi/seon-tech-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/seon-tech.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/seon-tech.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### SEON AML API
-
-The SEON AML API screens individuals and entities against politically-exposed-person (PEP), sanctions, watchlist, and adverse-media data sources for anti-money-laundering compliance, with optional ongoing monitoring.
-
-- **Human URL:** [https://docs.seon.io/api-reference/aml-api](https://docs.seon.io/api-reference/aml-api)
-- **Base URL:** `https://api.seon.io/SeonRestService/aml-api/v1`
-
-#### Tags
-
-- AML Compliance
-- PEP Screening
-- Sanctions Screening
-
-#### Properties
-
-- [Documentation](https://docs.seon.io/api-reference/aml-api)
-- [OpenAPI](openapi/seon-tech-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/seon-tech.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/seon-tech.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### SEON Device Intelligence
-
-SEON Device Intelligence is the device-fingerprinting product surfaced through JavaScript, iOS, Android, Flutter, React Native, Cordova, and Unity SDKs. Captured device signals (True Device ID, hashes, behavioral biometrics, geolocation, remote-access detection, residential-proxy and VPN detection) are returned via the Fraud API or User Session Monitoring stream.
-
-- **Human URL:** [https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-overview](https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-overview)
-
-#### Tags
-
-- Device Fingerprinting
-- Device Intelligence
-- Fraud Prevention
-
-#### Properties
-
-- [Documentation](https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-overview)
-- [SDK](https://github.com/seontechnologies/seon-web-sdk-public)
-- [SDK](https://github.com/seontechnologies/seon-ios-sdk-public)
-- [SDK](https://github.com/seontechnologies/seon-android-sdk-public)
-- [SDK](https://github.com/seontechnologies/seon-sdk-flutter-plugin)
-- [SDK](https://github.com/seontechnologies/seon-unity-sdk-plugin)
-- [Postman Collection](collections/seon-tech.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/seon-tech.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### SEON Identity Verification
-
-SEON Identity Verification (IDV) is an AI-powered identity verification product combining document checks, biometric liveness, and enriched fraud signals. Integration is via native iOS and Android SDKs.
-
-- **Human URL:** [https://docs.seon.io/knowledge-base/idv/identity-verification-solution](https://docs.seon.io/knowledge-base/idv/identity-verification-solution)
-
-#### Tags
-
-- Biometrics
-- Document Verification
-- Identity Verification
-- KYC
-
-#### Properties
-
-- [Documentation](https://docs.seon.io/knowledge-base/idv/identity-verification-solution)
-- [SDK](https://github.com/seontechnologies/seon-idv-sdk-ios-public)
-- [SDK](https://github.com/seontechnologies/seon-idv-sdk-android-public)
-- [Postman Collection](collections/seon-tech.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/seon-tech.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### SEON Orchestration
-
-SEON Orchestration lets customers compose multi-step fraud, KYC, and risk workflows that combine SEON enrichment with third-party providers. Integration is via the Orchestration SDKs for iOS, Android, Flutter, React Native, and Cordova.
-
-- **Human URL:** [https://seon.io/products/fraud-orchestration/](https://seon.io/products/fraud-orchestration/)
-
-#### Tags
-
-- Fraud Orchestration
-- Workflow
-
-#### Properties
-
-- [Documentation](https://seon.io/products/fraud-orchestration/)
-- [SDK](https://github.com/seontechnologies/seon-orchestration-sdk-ios-public)
-- [SDK](https://github.com/seontechnologies/seon-orchestration-sdk-android-public)
-- [SDK](https://github.com/seontechnologies/seon-orchestration-sdk-flutter-public)
-- [SDK](https://github.com/seontechnologies/seon-orchestration-sdk-react-native-public)
-- [SDK](https://github.com/seontechnologies/seon-orchestration-sdk-cordova-public)
-- [Postman Collection](collections/seon-tech.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/seon-tech.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### SEON User Session Monitoring
-
-User Session Monitoring streams in-session behavioral, device, and risk signals for continuous account-takeover and session-hijacking detection across web, iOS, and Android. Delivered via dedicated Stream SDKs.
-
-- **Human URL:** [https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-overview](https://docs.seon.io/knowledge-base/device-intelligence/device-intelligence-overview)
-
-#### Tags
-
-- Account Takeover
-- Behavioral Biometrics
-- Session Monitoring
-
-#### Properties
-
-- [SDK](https://github.com/seontechnologies/seon-web-stream-sdk-public)
-- [SDK](https://github.com/seontechnologies/seon-ios-stream-sdk-public)
-- [SDK](https://github.com/seontechnologies/seon-android-stream-sdk-public)
-- [Postman Collection](collections/seon-tech.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/seon-tech.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://seon.io/)
-- [Portal](https://docs.seon.io/)
 - [Documentation](https://docs.seon.io/api-reference)
-- [Getting Started](https://docs.seon.io/getting-started)
-- [Authentication](https://docs.seon.io/api-reference/introduction)
-- [Sign Up](https://admin.seon.io/sign-up)
-- [Sign In](https://admin.seon.io/)
+- [Getting started](https://docs.seon.io/getting-started)
 - [Pricing](https://seon.io/pricing/)
-- [Status Page](https://status.seon.io/)
 - [Blog](https://seon.io/resources/)
-- [Blog R S S](https://seon.io/resources/feed/)
-- [Terms of Service](https://seon.io/terms-and-conditions/)
-- [Privacy Policy](https://seon.io/privacy-policy/)
-- [Security Policy](https://seon.io/security/)
-- [Responsible Disclosure](https://seon.io/rdp/)
-- [GitHub Organization](https://github.com/seontechnologies)
-- [LinkedIn](https://www.linkedin.com/company/seon-tech)
-- [Twitter](https://twitter.com/seon_tech)
-- [Crunchbase](https://www.crunchbase.com/organization/seon-technologies)
-- [Integrations](https://seon.io/partners/)
-- [Customers](https://seon.io/customers/)
-- [Case Studies](https://seon.io/case-studies/)
-- [Careers](https://seon.io/careers/)
-- [Contact Us](https://seon.io/contact-us/)
-- [L L Ms Txt](https://docs.seon.io/llms.txt)
+- [Terms of service](https://seon.io/terms-and-conditions/)
+- [Privacy policy](https://seon.io/privacy-policy/)
+- [GitHub](https://github.com/seontechnologies)
+- [Status](https://status.seon.io/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 44.1** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.7 |
+| Contract quality | 47.2 |
+| Contract governance | 0.0 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 63.1 |
+| Access clarity | 43.4 |
+
+**Agent readiness 42.7** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 20.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/seon-tech/](https://apis.io/providers/seon-tech/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for SEON: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/seon-tech/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
